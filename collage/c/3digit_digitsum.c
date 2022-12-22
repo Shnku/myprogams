@@ -3,11 +3,11 @@
 int main()
 {
     int no, sum, rem, cheak;
-    sum = 0, cheak = 0;
     lebel:
         printf("\neh the no: ");
         scanf("%d", &no);
 
+        sum = 0, cheak = 0;
         while (no != 0)
         {
             rem = no % 10;
@@ -19,12 +19,12 @@ int main()
 
     if (cheak == 3)
     {
-        printf("\nthis is a 3_digit no \"VALID\",");
-        printf("\nthe sum of 3_digit is :%d", sum);
+        printf("\n \"VALID\"this is a 3_digit no,");
+        printf("\nthe sum of 3_digit is : %d", sum);
     }
     else
     {
-        printf("\n\"INVALID\", en. a 3 digit no..");
+        printf("\n\"INVALID\", en. a 3 digit no..\n");
         goto lebel;
     }
     return 0;
