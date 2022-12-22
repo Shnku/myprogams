@@ -1,0 +1,8 @@
+[Dolphin]
+SortRole=creationtime
+Timestamp=2022,12,22,1,2,33.305
+Version=4
+VisibleRoles=Icons_text,Icons_size,Icons_type
+
+[Settings]
+HiddenFilesShown=true
