@@ -33,3 +33,5 @@ void no_check(int n)
     else
         cout << "no";
 }
+
+//ending.
