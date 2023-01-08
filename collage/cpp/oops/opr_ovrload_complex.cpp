@@ -73,5 +73,14 @@ int main()
     sub.display();
     div.display();
     mul.display();
+    // simpley like function call....
+    sub = c1.operator-(c2);
+    sub.display();
+    sum = operator+(c1, c2);
+    sum.display();
+    sum = operator+(c1, operator+(c2, c3));
+    sum.display(); // valid
+    // sum=operator+(c1,c2,c3);sum.display(); //not valid....
+
     return 0;
 }
