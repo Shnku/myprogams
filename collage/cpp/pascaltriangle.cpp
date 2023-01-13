@@ -11,9 +11,6 @@ int f(int n)
 
 int combination(int n, int r)
 {
-    // if(n==0 && r==0)
-    //     return 1;
-    // else
     return f(n) / (f(r) * f(n - r));
     // return f(n) / f(r) * f(n - r); //error...
     // return (f(n) / f(r) * f(n - r)); //still error....
