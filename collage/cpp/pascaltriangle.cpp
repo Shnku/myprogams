@@ -16,6 +16,7 @@ float combination(int n, int r)
     // else
     return f(n) / (f(r) * f(n - r));
     // return f(n) / f(r) * f(n - r); //error...
+    // return (f(n) / f(r) * f(n - r)); //still error....
 }
 
 int main()
@@ -23,11 +24,6 @@ int main()
     int nth;
     cout << "en the nth term: ";
     cin >> nth;
-    // cout << f(5) << endl;
-    // cout << f(2) << endl;
-    // cout << f(5 - 2) << endl;
-    // cout << f(5) / f(2) * f(5 - 2) << endl;
-    // cout << combination(nth, 2);
 
     for (int i = 0; i <= nth; i++)
     {
@@ -47,3 +43,11 @@ int main()
 
     return 0;
 }
+
+
+
+    // cout << f(5) << endl;
+    // cout << f(2) << endl;
+    // cout << f(5 - 2) << endl;
+    // cout << f(5) / f(2) * f(5 - 2) << endl;
+    // cout << combination(nth, 2);
