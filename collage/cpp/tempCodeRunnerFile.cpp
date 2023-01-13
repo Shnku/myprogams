@@ -1,4 +1,3 @@
-inline int multi(int a, int b)
-{
-    return a * a * b * b;
-}
+if(n==0 && r==0)
+    //     return 1;
+    // else
