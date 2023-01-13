@@ -9,7 +9,7 @@ int f(int n)
         return (n * f(n - 1));
 }
 
-float combination(int n, int r)
+int combination(int n, int r)
 {
     // if(n==0 && r==0)
     //     return 1;
