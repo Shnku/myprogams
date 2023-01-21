@@ -1,4 +1,6 @@
-if (strcmp(t,s2)==0)
-            {
-                printf("found");
-            }
+int main()
+{
+    printf("calling program function: ");
+    main();
+    return 0;
+}
