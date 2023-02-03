@@ -18,6 +18,9 @@ union student_u
 
 int main()
 {
+    int a[15];
+    printf("\nsizeof arr : %d",sizeof(a));
+    printf("\n array length is: %d,",(sizeof(a)/sizeof(int)));
     int *ptr;
     float *ptr2;
     double *ptr3;
@@ -40,5 +43,5 @@ int main()
     printf("\n struct= %d bytes", sizeof(s1.b));
     return 0;
 }
-+
+
 
