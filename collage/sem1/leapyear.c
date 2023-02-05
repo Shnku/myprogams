@@ -3,7 +3,7 @@ void main()
 {
     int n,rem,s;
     printf("\n enter the year: ");
-    scanf("%d",&y);
+    scanf("%d",&n);
 
     if(n%100==0)
         s=n%400;

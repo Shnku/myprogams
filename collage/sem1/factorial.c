@@ -1,4 +1,5 @@
 #include <stdio.h>
+int facto(int );
 int main()
 {
     int i,nth,facto=1;
@@ -12,4 +13,11 @@ int main()
     }
     printf("the factorial is: %d\n",facto);
     return 0;
+}
+
+int facto(int n){
+    if(n==0)
+        return 1;
+    else
+        return n*facto(n-1);
 }
