@@ -50,7 +50,7 @@ public:
     //         balance = 0;
     // }
     void permissiom(){
-        if(ac_type=="savings")
+        if(ac_type=="savings");
             
     }
 };
