@@ -2,33 +2,41 @@
 #include <cstring>
 using namespace std;
 
-char ans[] = {'c', 'a', 'c', 'b', 'd'};
+char ans[] = {'c', 'a', 'c', 'b', 'd'}; // its size is 6...
 
 int main()
 {
-    char s[4][6]{
-        // 6 cause contains null
+    int stu_no;
+    char stu[stu_no][6]; // 6 cause contains null...
+    cout << "entr no of student: ";
+    cin >> stu_no;
+    for (int i = 0; i < stu_no; i++)
+    {
+        cout << "entr " << i << "th student's answer: ";
+        cin >> stu[i];
+    }
+    /*char stu[4][6]{
         "abcda",
         "bcdaa",
         "bdcac",
         "cadba",
-    };
+    };*/
     // int len = strlen(s); //!not working...
     // problem //? arrgument of type "char (*)[6]" is incompatible with parameter of type "const char ....
     // int len = strlen(s[4]); //! not working...note:
     // problem //?at offset 24 into source object 's' of size 24 ..char s[4][6]......
     // cout << len << endl;
 
-    int stu_no = 4, qus_no = 6 - 1;
+    int qus_no = 6 - 1;
     int marks[stu_no] = {0, 0, 0, 0}; //! init important..
     // else contains garbage value....
     for (int i = 0; i < stu_no; i++)
     {
         for (int j = 0; j < qus_no; j++)
         {
-            if (s[i][j] == ans[j])
+            if (stu[i][j] == ans[j])
             {
-                printf("\ns[%d][%d]=ans[%d] // (%c == %c)", i, j, j, s[i][j], ans[j]);
+                printf("\ns[%d][%d]=ans[%d] // (%c == %c)", i, j, j, stu[i][j], ans[j]);
                 marks[i]++;
                 printf("\tmarks[%d]=%d", i, marks[i]);
             }
