@@ -77,6 +77,21 @@ int date_is(int no_of_day)
             month_ptr = i;
             break;
         }
+        
+        /* //!this ts nit working.....
+        // printf("\nno=%d > month[%d]=%d ?\t ", no_of_day, i, month[i]);
+        // if (no_of_day > month[i])
+        // {
+        //     printf("\nno - month[%d] = %d - %d == %d\t", i, no_of_day, month[i], no_of_day-month[i]);
+        //     no_of_day -= month[i];
+        // }
+        // else
+        // {
+        //     date = no_of_day;
+        //     month_ptr = i;
+        //     break;
+        // }
+        */
     }
     return date;
 }
