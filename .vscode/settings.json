@@ -4,7 +4,3 @@
         "cmath": "cpp"
     }
 },
-{
-  "editor.tabCompletion": true,
-  "editor.snippetSuggestions": "top"
-}

@@ -14,17 +14,21 @@ int main()
     float sum = 0;
     for (i = 0; i < 3; i++)
     {
+        fflush(stdin);
         printf("\nen %d book details:\n", i);
-        // fflush(stdin);
         // gets(b[i].name);
         // for(int j=0;;j++)
         // for(int j=0; (char)j!='\n'; j++)
         // scanf("%c", &b[i].name[j]);
 
         // printf("\nen price and pg no: ");
-        scanf("%s", b[i].name);
+        // scanf("%s", b[i].name);
+        fgets(b[i].name, 20, stdin);
+        fflush(stdin);
         scanf("%d", &b[i].page);
+        fflush(stdin);
         scanf("%f", &b[i].price);
+        fflush(stdin);
     }
     printf("\ndisplay book details:\n");
     for (i = 0; i < 3; i++)
