@@ -1,7 +1,6 @@
 #include <stdio.h>
 void creat_array(int *a[], int size);
 void display_array(int *a[], int size);
-void shift_array(int *a[], int size);
 
 int main()
 {
