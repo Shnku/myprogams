@@ -31,7 +31,7 @@ class lower : public middle1, public middle2
 public:
     void display()
     {
-        upper::display(); // error....
+        // upper::display(); // !error....
     }
 };
 
@@ -53,8 +53,8 @@ int main()
     obj_low.middle1::up = 100;
     obj_low.middle1::display();
 
-    obj_low.upper::up = 200;
-    obj_low.upper::display();
+    // obj_low.upper::up = 200; //!causing error...
+    // obj_low.upper::display(); //!causing error...
     obj_low.display();
 
     return 0;
