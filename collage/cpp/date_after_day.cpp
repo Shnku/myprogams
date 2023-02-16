@@ -2,6 +2,7 @@
 using namespace std;
 
 int month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+// enum month{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}//!not to do that....
 int month_ptr;
 
 // leap year cheaking function......
@@ -77,7 +78,7 @@ int date_is(int no_of_day)
             month_ptr = i;
             break;
         }
-        
+
         /* //!this ts nit working.....
         // printf("\nno=%d > month[%d]=%d ?\t ", no_of_day, i, month[i]);
         // if (no_of_day > month[i])
