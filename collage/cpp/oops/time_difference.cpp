@@ -42,7 +42,7 @@ calctime calctime::difference(calctime n)
     {
         hour = hour - 1;
     }
-        res.hour = hour - n.hour;
+    res.hour = hour - n.hour;
     return res;
 }
 
