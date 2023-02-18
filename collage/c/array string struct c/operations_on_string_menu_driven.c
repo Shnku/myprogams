@@ -10,9 +10,9 @@ void string_cpmpare(char *c1,char* c2);
 
 int main()
 {
-    char c[50];
+    char c[80];
     printf("\nenter the syrind: ");
-    fgets(c,50,stdin);
+    fgets(c,80,stdin);
 
     return 0;
 }
