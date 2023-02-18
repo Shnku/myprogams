@@ -6,9 +6,9 @@ int main()
     printf("\nupdatine the git repo\n");
     printf("....................................\n");
     system("git add --all");
-    printf("\n");
+    printf("\n\n");
     system("git commit -m \".\"");
-    printf("\n");
+    printf("\n\n");
     system("git push -u origin");
 
     return 0;
