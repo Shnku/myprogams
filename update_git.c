@@ -4,7 +4,7 @@ int main()
 {
     printf("\n....................................");
     printf("\nupdatine the git repo\n");
-    printf("\n....................................");
+    printf("....................................\n");
     system("git add --all");
     printf("\n");
     system("git commit -m \".\"");
