@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int i=1,s=0,n;
+    int i=2,s=0,n;
     printf("en the nth: ");
     scanf("%d",&n);
     do{
