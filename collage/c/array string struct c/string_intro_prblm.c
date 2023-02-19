@@ -92,7 +92,7 @@ int main_onlychar()
     */
 }
 
-int main()
+int main_fix_a()
 {
     // fixinf the before problem occures in ...*main_a*..
     int no;
@@ -105,4 +105,40 @@ int main()
     printf("\nenter the syrind: ");
     fgets(c, 80, stdin);
     printf("\nthe string is: %s", c);
+
+    // but the problem still ocurres whin i left a whitespace..
+    // getchar reads the whitespace not '\n'....
+    /*
+    en the no: 50 _ _
+    �
+    enter the syrind:
+    the string is:
+    */
+}
+
+int main()
+{
+    // to fix whitespace problem...
+    int no;
+    printf("\nen the no: ");
+    scanf("%d", &no);
+
+    printf("%c", stdin);
+    // getchar(); // it will read only one ' ' ..
+    // so use,,,
+    while (getchar() != '\n')
+    {
+    }
+    char c[80];
+    printf("\nenter the syrind: ");
+    fgets(c, 80, stdin);
+    printf("\nthe string is: %s", c);
+    /*
+    fix...
+    en the no: 50
+    �
+    enter the syrind: this is thr
+
+    the string is: this is thr
+    */
 }

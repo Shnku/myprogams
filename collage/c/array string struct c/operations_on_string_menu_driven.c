@@ -1,3 +1,4 @@
+// program for all string operations....
 #include <stdio.h>
 
 void get_string(char *s);
@@ -15,6 +16,6 @@ int main()
     printf("\nenter the syrind: ");
     fgets(c, 80, stdin);
     printf("%c", stdin);
-    
+
     return 0;
 }
