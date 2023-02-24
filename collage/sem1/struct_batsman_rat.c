@@ -15,7 +15,7 @@ int main()
 
     for (i = 0; i < 3; i++)
     {
-        printf("\nen %dth player details:");
+        printf("\nen %dth player details:",i);
         // fflush(stdin);
         getchar();
         fgets(plr[i].name, 20, stdin);
@@ -25,10 +25,22 @@ int main()
     printf("the palyer details are: ");
     for (i = 0; i < 3; i++)
     {
-        printf("name: %s",plr[i].name);
-        printf("run: %d",plr[i].run);
-        printf("value: %f",plr[i].value);
+        printf("name: %s", plr[i].name);
+        printf("run: %d", plr[i].run);
+        printf("value: %f", plr[i].value);
     }
 
+    printf("\n\neighest rated batsman is: \n");
+    max = plr[0].value;
+    for (int i = 1; i < 3; i++)
+    {
+        if (plr[i].value > max)
+        {
+            max = plr[i].value;
+            max_i = i;
+        }
+    }
+    printf("\nmax value is: %f", max);
+    printf("\nname: %s, run: %d, value: %f", plr[i].name, plr[i].run, plr[i].value);
     return 0;
 }
