@@ -18,6 +18,6 @@ int main()
     if(flag==0)    
         printf("\npalindrome...");
     else
-        printf("\not...");
+        printf("\nnot...");
     return 0;
 }
