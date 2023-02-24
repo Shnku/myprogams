@@ -13,7 +13,7 @@ public:
 	{
 		cout << "\nEnter car name: ";
 		cin >> nm;
-		cout << "Enter lwh: ";
+		cout << "Enter car length x width x height: ";
 		cin >> l >> w >> h;
 		cout << "Enter price: ";
 		cin >> price;
@@ -31,7 +31,7 @@ public:
 	{
 		cout << "\nCAR NAME: "<< nm
 			 << "\t " <<l <<" * "<<w<<" * "<<h
-			 << "\tPrice: "<< price << "\t So tax = "<< tax
+			 << "\tPrice: "<< price << "\t So Onroad tax = "<< tax
 			 << "\tSo Final Price:= "<< price+tax <<endl ;
 	}
 };
