@@ -5,10 +5,12 @@ struct batsman
     int run;
     float value;
 };
+// typedef struct batsman ;
 typedef struct batsman man;
 
 int main()
 {
+    // batsman plr[3];//!identifier "batsman" is undefined
     man plr[3];
     int i, max_i;
     float max = 0;
