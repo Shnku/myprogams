@@ -15,24 +15,24 @@ int main()
 
     for (i = 0; i < 3; i++)
     {
-        printf("\nen %dth player details:",i);
+        printf("\nen %dth player details:", i);
         // fflush(stdin);
         getchar();
         fgets(plr[i].name, 20, stdin);
         scanf("%d%f", &plr[i].run, &plr[i].value);
     }
 
-    printf("the palyer details are: ");
+    printf("the palyer details are: \n\n");
     for (i = 0; i < 3; i++)
     {
-        printf("name: %s", plr[i].name);
-        printf("run: %d", plr[i].run);
-        printf("value: %f", plr[i].value);
+        printf("name: %s\t", plr[i].name);
+        printf("run: %d\t", plr[i].run);
+        printf("value: %f\t", plr[i].value);
+        printf("\n");
     }
 
-    printf("\n\neighest rated batsman is: \n");
     max = plr[0].value;
-    for (int i = 1; i < 3; i++)
+    for ( i = 1; i < 3; i++)
     {
         if (plr[i].value > max)
         {
@@ -41,6 +41,7 @@ int main()
         }
     }
     printf("\nmax value is: %f", max);
-    printf("\nname: %s, run: %d, value: %f", plr[i].name, plr[i].run, plr[i].value);
+    printf("\n\neighest rated batsman is: \n");
+    printf("\nname: %s, run: %d, value: %f", plr[max_i].name, plr[max_i].run, plr[max_i].value);
     return 0;
 }
