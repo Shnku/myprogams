@@ -28,7 +28,6 @@ int main()
     int sum = 0;
     sum = add(arr, 7);
     printf("\nthe sum: %d", sum);
-    ;
     return 0;
 }
 
