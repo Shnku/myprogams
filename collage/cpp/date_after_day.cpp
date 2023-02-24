@@ -23,13 +23,7 @@ bool leap_chk(int &y)
 // choosing month function.......
 string which_month(int month_ptr)
 { // !char* which_month(int month_ptr)
-    // it works but give warning..
-
-    /*
-    !date_after_day.cpp:62:16: warning: ISO C++ forbids converting a string constant to 'char*' [-Wwrite-strings] 62 | return " dec";*/
-
-    //! the sollution of this warning is...
-
+  // it works but give warning..
     /*
     This warning is telling you that you are trying to convert a string constant to a 'char*' type, which is not allowed in ISO C++.
     ?The solution is to create a new char array and copy the string to it, before returning the char array.
@@ -80,6 +74,7 @@ string which_month(int month_ptr)
         return " dec";
         break;
     }
+    return 0;
 }
 
 // date identyfier function......
