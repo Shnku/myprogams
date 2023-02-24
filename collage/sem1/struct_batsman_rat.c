@@ -16,12 +16,14 @@ int main()
     for ( i = 0; i < 3; i++)
     {
         printf("\nen %dth player details:");
-        fflush(stdin);
-        gets(plr[i].name);
-        fflush(stdin);
-
+        // fflush(stdin);
+        getchar();
+        fgets(plr[i].name,20,stdin);
         scanf("%d%f", &plr[i].run,&plr[i].value);
     }
+
+    printf("the palyer details are: ");
+    
     
     return 0;
 }
