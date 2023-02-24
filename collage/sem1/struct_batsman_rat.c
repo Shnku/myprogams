@@ -25,6 +25,9 @@ int main()
     printf("the palyer details are: ");
     for (i = 0; i < 3; i++)
     {
+        printf("name: %s",plr[i].name);
+        printf("run: %d",plr[i].run);
+        printf("value: %f",plr[i].value);
     }
 
     return 0;
