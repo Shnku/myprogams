@@ -1,29 +1,29 @@
 #include <iostream>
 using namespace std;
-class time
+class timemy
 {
 	int hour, min, sec;
 
 public:
-	time() {}
-	~time() {}
+	timemy() {}
+	~timemy() {}
 	void getdeta();
 	void display();
-	void sum(time, time);
+	void sum(timemy, timemy);
 };
 
-void time::getdeta()
+void timemy::getdeta()
 {
 	cout << "Enter hour,min,sec: ";
 	cin >> hour >> min >> sec;
 }
 
-void time::display()
+void timemy::display()
 {
-	cout << hour << "H " << min << "M " << sec << "S";
+	cout << hour << " : " << min << " : " << sec << " S";
 }
 
-void time::sum(time t1, time t2)
+void timemy::sum(timemy t1, timemy t2)
 {
 	sec = t1.sec + t2.sec;
 	sec = sec % 60;
@@ -38,7 +38,7 @@ void time::sum(time t1, time t2)
 
 int main()
 {
-	time x, y, result;
+	timemy x, y, result;
 	x.getdeta();
 	y.getdeta();
 	result.sum(x, y);
