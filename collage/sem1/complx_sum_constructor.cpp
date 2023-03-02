@@ -3,13 +3,26 @@ using namespace std;
 
 class complex
 {
-	int a,b;
+	int real, img;
+
 public:
 	complex();
-	complex(int x,int y){ a=x; b=y;}
-	complex(complex &x){ a=x.a; b=x.b;}
-	friend complex substract(complex,complex);
+	complex(int x, int y)
+	{
+		real = x;
+		img = y;
+	}
+	complex(complex &x)
+	{
+		real = x.real;
+		img = x.img;
+	}
+	friend complex substract(complex, complex);
 	void display();
 	~complex();
 };
 
+complex substract(complex a,complex b){
+	complex temp;
+	
+}
