@@ -2,25 +2,28 @@
 using namespace std;
 class time
 {
-	int hour,min,sec;
+	int hour, min, sec;
+
 public:
-	time();
-	~time();
+	time() {}
+	~time() {}
 	void getdeta();
 	void display();
-	void sum(time,time);
+	void sum(time, time);
 };
 
-void time::getdeta(){
+void time::getdeta()
+{
 	cout << "Enter hour,min,sec: ";
 	cin >> hour >> min >> sec;
 }
 
-void time::display(){
+void time::display()
+{
 	cout << hour << "H " << min << "M " << sec << "S";
 }
 
-void time::sum(time t1,time t2)
+void time::sum(time t1, time t2)
 {
 	sec = t1.sec + t2.sec;
 	sec = sec % 60;
@@ -35,13 +38,15 @@ void time::sum(time t1,time t2)
 
 int main()
 {
-	time A,B,Sum;
-	A.getdeta();
-	B.getdeta();
-	Sum.sum(A,B);
-	A.display();
-	B.display();
-	Sum.display();
+	time x, y, result;
+	x.getdeta();
+	y.getdeta();
+	result.sum(x, y);
+	x.display();
+	cout << endl;
+	y.display();
+	cout << endl;
+	result.display();
+	cout << endl;
 	return 0;
 }
-
