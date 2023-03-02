@@ -3,20 +3,21 @@ using namespace std;
 
 class complex
 {
-	int a,b;
-public:
-	complex();
-	~complex();
+	int a, b;
 
-	void getdeta(){
+public:
+	void getdeta()
+	{
 		cout << "Enter the number: ";
 		cin >> a >> b;
 	}
-	void display(){
-		cout << a << ( b<0 ? "-" : "+") << b << "i";
+	void display()
+	{
+		cout << '\n'
+			 << a << (b < 0 ? "-" : "+") << b << "i";
 	}
 
-	void addition(complex x,complex y)
+	void addition(complex x, complex y)
 	{
 		a = x.a + y.a;
 		b = x.b + y.b;
@@ -25,10 +26,10 @@ public:
 
 int main()
 {
-	complex c1,c2,sum;
+	complex c1, c2, sum;
 	c1.getdeta();
 	c2.getdeta();
-	sum.addition(c1,c2);
+	sum.addition(c1, c2);
 	c1.display();
 	c2.display();
 	sum.display();
