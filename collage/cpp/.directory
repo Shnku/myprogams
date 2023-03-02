@@ -1,0 +1,6 @@
+[Dolphin]
+GroupedSorting=true
+SortRole=type
+Timestamp=2023,3,2,20,28,43.632
+Version=4
+VisibleRoles=Icons_text,Icons_size,Icons_type
