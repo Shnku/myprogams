@@ -116,13 +116,13 @@ void box::operator=(box t2nd) // multiple assignment
 
 bool box::cheak_cube()
 {
-    return (height == width == length ? true : false);
+    return (height != width || width != length ? false : true);
 }
 
 // the main function body....
 int main()
 {
-    box b1(10, 30, 20), b2(20, 50, 60), b3, b4;
+    box b1(10, 30, 20), b2(20, 50, 60), b3, b4, b5(4, 4, 4);
     b3.setdata();
     b4 = b3; // assignment operatoe also worked when not = operator overloaded.....
 
@@ -141,5 +141,32 @@ int main()
     b2.display();
     tmp.display();
 
+    cout << endl;
+    cout << "\narea of box b3: " << b3.calc_surface_area();
+    cout << "\nvoloume oh box b4: " << b4.clac_voloume();
+    cout << "\n"
+         << (b5.cheak_cube() ? "b5 is a cube" : "not a cube");
+    cout << "\n"
+         << (b3 == b4 ? "b3 & b4 are same box " : "different box");
     return 0;
 }
+
+/*output
+enter box length x width x height: 1 2 3
+
+ b1 before:
+30x20x10
+b1 after:
+31x21x11
+
+b2 before:---
+50x60x20
+b2 after:---
+51x61x21
+50x60x20
+
+area of box b3: 22
+voloume oh box b4: 6
+b5 is a cube
+b3 & b4 are same box
+*/
