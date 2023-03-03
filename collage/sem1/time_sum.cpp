@@ -26,12 +26,12 @@ void timemy::display()
 void timemy::sum(timemy t1, timemy t2)
 {
 	sec = t1.sec + t2.sec;
+	min = sec / 60;
 	sec = sec % 60;
-	min += sec / 60;
 
 	min = min + t1.min + t2.min;
+	hour = min / 60;
 	min = min % 60;
-	hour += min / 60;
 
 	hour = hour + t1.hour + t2.hour;
 }
