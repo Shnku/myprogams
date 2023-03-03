@@ -8,21 +8,28 @@ private:
 
 public:
     box() {}
-    box(float h, float i, float w) {}
     ~box() {}
+    box(float h, float i, float w);
+
     void setdata();
     void display();
     float calc_surface_area();
     float clac_voloume();
+    bool cheak_cube();
+
     box operator++();      // pre fix
     box operator++(int x); // post fix
     // box operator++(box x);   //not works...
     friend box operator--(box &);        // pre fix
     friend box operator--(box &, int x); // post fix
     friend bool operator==(box &, box &);
-    // box operator=(box);
-    bool cheak_cube();
+    void operator=(box);
 };
+
+//.
+//.............................................
+// function directly details:-bellow---------------
+//...........................................
 
 box::box(float h, float i, float w)
 { // parametrized constructor...
@@ -40,8 +47,7 @@ void box::setdata()
 void box::display()
 { // display height, width, length,,..
     cout << "\n"
-         << length << "x" << width << "x" << height
-         << '\n';
+         << length << "x" << width << "x" << height;
 }
 
 float box::calc_surface_area()
@@ -62,30 +68,32 @@ box box::operator++() // pre
     return *this; // then return the change value
 }
 
-box box::operator++(int x) // post
-{                          // copy current then increse then return
-    box temp(*this);       // first cpoy the current state //copy constructor...
-    temp.height++;         // then increase
-    temp.length++;
-    temp.width++;
-    return temp; // then return the incressed value..
+box box::operator++(int x) // post // copy current then increse then return
+{
+    box oldstate(*this); // first cpoy the current state //copy constructor...
+    height++;
+    width++;
+    length++;
+    return oldstate; // return the temporary object (i.e., the old state)
 }
 
-box operator--(box &temp) // pre// increase first return modified
-{                         // have to pass a copy of current state as this is a friend func we can't pass vy vlu directly...
-    temp.height++;        // increase temp as friend ..
-    temp.length++;
-    temp.width++;
+box operator--(box &temp) // pre// increase first,then  return the modified
+{
+    // suppose here this == temp...
+    temp.height--; // increase temp as friend ..
+    temp.length--;
+    temp.width--;
     // return *this;   //friend func doesn't have this ..
     return temp;
 }
 
 box operator--(box &temp, int x) // x is dummy parameter..
 {
-    temp.height++; // increase temp as friend ..
-    temp.length++;
-    temp.width++;
-    return temp;
+    box oldState(temp); // create a temp with the current state
+    temp.height--;
+    temp.width--;
+    temp.length--;
+    return oldState; // return the temp with the old state
 }
 
 bool operator==(box &b1, box &b2)
@@ -98,12 +106,13 @@ bool operator==(box &b1, box &b2)
         return false;
 }
 
-// box box::operator=(box t2nd)
-// {
-//     height = t2nd.height;
-//     width = t2nd.width;
-//     length = t2nd.length;
-// }
+void box::operator=(box t2nd) // multiple assignment
+{
+    // assignment operatoe also worked when not = operator overloaded.....
+    height = t2nd.height;
+    width = t2nd.width;
+    length = t2nd.length;
+}
 
 bool box::cheak_cube()
 {
@@ -114,6 +123,23 @@ bool box::cheak_cube()
 int main()
 {
     box b1(10, 30, 20), b2(20, 50, 60), b3, b4;
-    b3 = b1;
+    b3.setdata();
+    b4 = b3; // assignment operatoe also worked when not = operator overloaded.....
+
+    cout << "\n b1 before:";
+    b1.display();
+    // box tmp = ++b1;
+    ++b1;
+    cout << "\nb1 after:";
+    b1.display();
+    // tmp.display();
+
+    cout << "\n\nb2 before:---";
+    b2.display();
+    box tmp = b2++;
+    cout << "\nb2 after:---";
+    b2.display();
+    tmp.display();
+
     return 0;
 }
