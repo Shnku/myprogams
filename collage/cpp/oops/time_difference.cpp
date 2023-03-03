@@ -22,8 +22,22 @@ public:
     ~calctime() {}
     calctime difference(calctime);
     calctime operator-(calctime); // as same as before...
+    void addition(calctime, calctime);
     void display();
 };
+
+void calctime::addition(calctime a, calctime b)
+{
+    sec = a.sec + b.sec;
+    min = sec / 60; //! we have to do that first cause..
+    sec = sec % 60; // sec changed in this line..
+
+    min = min + a.min + b.min;
+    hour = min / 60;
+    min = min % 60;
+
+    hour = hour + a.hour + b.hour;
+}
 
 calctime calctime::difference(calctime n)
 {
@@ -73,7 +87,7 @@ calctime calctime::operator-(calctime n)
 
 int main()
 {
-    calctime t1, t2, res, res2;
+    calctime t1, t2, res, res2, sum;
     t1.set();
     t2.set();
 
@@ -89,6 +103,11 @@ int main()
 
     cout << "\nusing opeartor overload...........\n";
     res2.display();
+
+    sum.addition(t1, t2);
+    cout << "\nsummasum of 2 times are.........\n";
+    sum.display();
+
     return 0;
 }
 
@@ -154,4 +173,24 @@ time= 9:82:76
 time= 5:56:40
 ?difference between times are.........
 time= 4:26:36
+*/
+
+/*
+//addition operation is this.........
+en the thim in hms format: 10 20 30
+en the thim in hms format: 2 40 50
+
+given times are.........
+time= 10:20:30
+time= 9:79:90
+time= 2:40:50
+
+difference between times are.........
+time= 7:39:40
+
+using opeartor overload...........
+time= 7:39:40
+
+summasum of 2 times are.........
+time= 13:1:20
 */
