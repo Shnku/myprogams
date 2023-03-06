@@ -39,7 +39,7 @@ for do it.........................
 Yes, you can implement this matrix class without dynamic memory allocation.
 You can declare the size of the matrix at compile time using a constant value or a template parameter.
 
-For example, you can declare the size of the matrix using a template parameter as follows:
+todo: For example, you can declare the size of the matrix using a template parameter as follows:
 
 template <class T, int ROW, int COL>
 class Matrix
@@ -199,3 +199,123 @@ int main()
 
     return 0;
 }
+
+
+/*
+!reeors...
+
+ex_template_matrix_wrong.cc:17:11: error: invalid use of non-static data member 'matrix<T>::row'
+   17 |     T mat[row][col];
+      |           ^~~
+ex_template_matrix_wrong.cc:16:9: note: declared here
+   16 |     int row, col;
+      |         ^~~
+ex_template_matrix_wrong.cc:17:16: error: invalid use of non-static data member 'matrix<T>::col'
+   17 |     T mat[row][col];
+      |                ^~~
+ex_template_matrix_wrong.cc:16:14: note: declared here
+   16 |     int row, col;
+      |              ^~~
+ex_template_matrix_wrong.cc:28:43: warning: friend declaration 'matrix<T> operator*(matrix<T>, matrix<T>)' declares a non-template function [-Wnon-template-friend]
+   28 |     friend matrix operator*(matrix, matrix);
+      |                                           ^
+ex_template_matrix_wrong.cc:28:43: note: (if this is not what you intended, make sure the function template has already been declared and add '<>' after the function name here)
+ex_template_matrix_wrong.cc: In member function 'void matrix<T>::setdata()':
+ex_template_matrix_wrong.cc:96:20: error: 'mat' was not declared in this scope
+   96 |             cin >> mat[i][j];
+      |                    ^~~
+ex_template_matrix_wrong.cc: In member function 'void matrix<T>::display()':
+ex_template_matrix_wrong.cc:108:29: error: 'mat' was not declared in this scope
+  108 |             cout << "| " << mat[i][j] << " ";
+      |                             ^~~
+ex_template_matrix_wrong.cc: At global scope:
+ex_template_matrix_wrong.cc:115:14: error: using template type parameter 'T' after 'class'
+  115 | matrix<class T> matrix<class T>::operator+(matrix tmp)
+      |              ^
+ex_template_matrix_wrong.cc:115:15: error: template argument 1 is invalid
+  115 | matrix<class T> matrix<class T>::operator+(matrix tmp)
+      |               ^
+ex_template_matrix_wrong.cc:115:30: error: using template type parameter 'T' after 'class'
+  115 | matrix<class T> matrix<class T>::operator+(matrix tmp)
+      |                              ^
+ex_template_matrix_wrong.cc:115:31: error: template argument 1 is invalid
+  115 | matrix<class T> matrix<class T>::operator+(matrix tmp)
+      |                               ^
+ex_template_matrix_wrong.cc:115:44: error: class template placeholder 'matrix' not permitted in this context
+  115 | x<class T> matrix<class T>::operator+(matrix tmp)
+      |                                       ^~~~~~
+
+ex_template_matrix_wrong.cc:115:17: error: 'int operator+(...)' must have an argument of class or enumerated type
+  115 | matrix<class T> matrix<class T>::operator+(matrix tmp)
+      |                 ^~~~~~~~~~~~~~~
+ex_template_matrix_wrong.cc:129:14: error: using template type parameter 'T' after 'class'
+  129 | matrix<class T> matrix<class T>::operator-(matrix tmp)
+      |              ^
+ex_template_matrix_wrong.cc:129:15: error: template argument 1 is invalid
+  129 | matrix<class T> matrix<class T>::operator-(matrix tmp)
+      |               ^
+ex_template_matrix_wrong.cc:129:30: error: using template type parameter 'T' after 'class'
+  129 | matrix<class T> matrix<class T>::operator-(matrix tmp)
+      |                              ^
+ex_template_matrix_wrong.cc:129:31: error: template argument 1 is invalid
+  129 | matrix<class T> matrix<class T>::operator-(matrix tmp)
+      |                               ^
+ex_template_matrix_wrong.cc:129:44: error: class template placeholder 'matrix' not permitted in this context
+  129 | x<class T> matrix<class T>::operator-(matrix tmp)
+      |                                       ^~~~~~
+
+ex_template_matrix_wrong.cc:129:17: error: 'int operator-(...)' must have an argument of class or enumerated type
+  129 | matrix<class T> matrix<class T>::operator-(matrix tmp)
+      |                 ^~~~~~~~~~~~~~~
+ex_template_matrix_wrong.cc:149:14: error: using template type parameter 'T' after 'class'
+  149 | matrix<class T> operator*(matrix<class T> a, matrix<class T> b)
+      |              ^
+ex_template_matrix_wrong.cc:149:15: error: template argument 1 is invalid
+  149 | matrix<class T> operator*(matrix<class T> a, matrix<class T> b)
+      |               ^
+ex_template_matrix_wrong.cc:149:40: error: using template type parameter 'T' after 'class'
+  149 | atrix<class T> operator*(matrix<class T> a, matrix<class T> b)
+      |                                       ^
+
+ex_template_matrix_wrong.cc:149:41: error: template argument 1 is invalid
+  149 | trix<class T> operator*(matrix<class T> a, matrix<class T> b)
+      |                                       ^
+
+ex_template_matrix_wrong.cc:149:59: error: using template type parameter 'T' after 'class'
+  149 | > operator*(matrix<class T> a, matrix<class T> b)
+      |                                             ^
+
+ex_template_matrix_wrong.cc:149:60: error: template argument 1 is invalid
+  149 | > operator*(matrix<class T> a, matrix<class T> b)
+      |                                              ^
+
+ex_template_matrix_wrong.cc:149:17: error: 'int operator*(int, int)' must have an argument of class or enumerated type
+  149 | matrix<class T> operator*(matrix<class T> a, matrix<class T> b)
+      |                 ^~~~~~~~
+ex_template_matrix_wrong.cc:180:19: error: using template type parameter 'T' after 'class'
+  180 | void matrix<class T>::transporse()
+      |                   ^
+ex_template_matrix_wrong.cc:180:20: error: template argument 1 is invalid
+  180 | void matrix<class T>::transporse()
+      |                    ^
+ex_template_matrix_wrong.cc: In function 'void transporse()':
+ex_template_matrix_wrong.cc:182:25: error: 'row' was not declared in this scope
+  182 |     for (int i = 0; i < row; i++)
+      |                         ^~~
+ex_template_matrix_wrong.cc:184:19: error: expected ';' before 'i'
+  184 |         for (int j i = 0; i < col; i++)
+      |                   ^~
+      |                   ;
+ex_template_matrix_wrong.cc:184:31: error: 'col' was not declared in this scope
+  184 |         for (int j i = 0; i < col; i++)
+      |                               ^~~
+ex_template_matrix_wrong.cc:184:34: error: expected ')' before ';' token
+  184 |         for (int j i = 0; i < col; i++)
+      |             ~                    ^
+      |                                  )
+ex_template_matrix_wrong.cc:184:39: error: expected ';' before ')' token
+  184 |         for (int j i = 0; i < col; i++)
+      |                                       ^
+      |                                       ;
+
+*/
