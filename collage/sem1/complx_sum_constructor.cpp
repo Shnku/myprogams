@@ -41,9 +41,9 @@ void complex::display()
 int main()
 {
 	complex x(8, 5), y(x), z(4, 7), sum;
-	sum = substract(y, z);
 	x.display();
 	y.display();
 	z.display();
+	sum = substract(y, z);
 	sum.display();
 }
