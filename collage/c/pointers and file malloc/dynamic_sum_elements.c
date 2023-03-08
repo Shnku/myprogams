@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void display(int *, int);
+void getdata(int *, int);
 void display(int *, int);
 void sum(int *, int);
 
@@ -14,11 +14,17 @@ int main()
     getdata(pointer, size);
     display(pointer, size);
     sum(pointer, size);
+
+    pointer = realloc(pointer, size + 5);
+    getdata(pointer, size + 5);
+    display(pointer, size + 5);
+
     return 0;
 }
 
 void getdata(int *p, int count)
 {
+    printf("enter list data:\n");
     for (int i = 0; i < count; i++)
     {
         scanf("%d", p + i);
@@ -27,9 +33,10 @@ void getdata(int *p, int count)
 
 void display(int *p, int count)
 {
+    printf("\nthe list is: ");
     for (int i = 0; i < count; i++)
     {
-        printf("\t %d", *(p + i));
+        printf(" %d", *(p + i));
     }
 }
 
