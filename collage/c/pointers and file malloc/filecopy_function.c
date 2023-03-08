@@ -28,7 +28,7 @@ void file_copy(char *f1, char *f2)
 
 int main()
 {
-
+    printf("\ncopyingfile1 to file2:\n");
     file_copy("file1.txt", "file2.txt");
     return 0;
 }
@@ -62,24 +62,9 @@ FILE *opn, *cpy;
 file_copy(opn, "file1.txt", cpy, "file2.txt");
 This results in undefined behavior since these pointers may contain garbage value, which can cause unexpected results or crashes.
 
-//?2. Incorrect use of feof
-The file_copy function uses feof incorrectly to determine if the end of the input file has been reached.
-
-
-while (!feof(open))
-{
-    fputc(fgetc(open), to_copy);
-}
-The problem with this approach is that feof returns true only after an attempt has been made to read beyond the end of the file. So, it may result in extra characters being copied, depending on how fgetc is implemented.
-
 //?3. No error checking after writing to output file
 The file_copy function doesn't check if the output file operation fputc was successful or not. It only prints a message when reach end-of-file of the input file, but there could be errors at other times that aren't handled.
 
-//?4. Overwriting input file pointer values
-The variable open and to_copy reassignment in the code below appears innocent and makes the code look cleaner but it can confuse someone who isn’t familiar with such operation.
-
-if (((open = fopen(f1, "r")) == NULL) || (to_copy = fopen(f2, "w")) == NULL)
-The operation attempts to open the given files and if either fails then we print an error message and exit with a failure. However it is unclear if the arguments passed to file_copy should affect the values of its parameters. This could also cause confusion down the line.
 */
 /*
 ?sollution...
