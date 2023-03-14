@@ -26,7 +26,7 @@ int main()
 {
     int arr[] = {1, 2, 3, 4, 5, 6};
     int sum = 0;
-    sum = add(arr, 7);
+    sum = add(arr, 6);
     printf("\nthe sum: %d", sum);
     return 0;
 }

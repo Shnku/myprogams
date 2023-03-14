@@ -25,7 +25,7 @@ int main()
         printf("\nfile can't be open ");
         exit(0);
     }
-    
+
     return 0;
 }
 
