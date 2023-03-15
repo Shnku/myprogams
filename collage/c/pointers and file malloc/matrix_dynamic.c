@@ -51,7 +51,7 @@ void display(matrix m)
         for (int j = 0; j < m.col; j++)
         {
             printf(" %3d", *((m.array + i) + j));
-            printf(" %3d", m.array[i][j]);
+            // printf(" %3d", m.array[i][j]);
         }
     }
 }
