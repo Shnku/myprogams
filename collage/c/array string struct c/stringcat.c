@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 // char func_concat(char[], char[]);
-// char *concatinate(char[], char[]);
+// char *concatinate_wrong(char[], char[]);
 void concatinate(char a[], char b[], char *ptr)
 {
     int size = 0;
@@ -18,7 +18,7 @@ void concatinate(char a[], char b[], char *ptr)
     temp[size] = '\0';
     strcpy(ptr, temp);
 }
-// char *ptr;
+char *ptr;
 
 int main()
 {
@@ -29,6 +29,8 @@ int main()
     scanf("%s", s2); // using %[^\n] couldnot take input ..
 
     concatinate(s1, s2, finl);
+    // char *f = concatinate_wrong(s1, s2);
+    // strcpy(finl, f);
     // finl = func_concat(s1, s2);..... wrong
     printf("the final string is : %s", finl);
     return 0;
@@ -57,10 +59,10 @@ int main()
 // }
 
 /*
-char *concatinate(char *a, char *b)
+char *concatinate_wrong(char *a, char *b)
 {
     int size = 0;
-    char temp[40];
+    char *temp;
     for (int i = 0; a[i]; i++)
     {
         temp[size] = a[i];
@@ -71,10 +73,10 @@ char *concatinate(char *a, char *b)
         temp[size++] = *(b + i);
     }
     temp[size] = '\0';
-    strcpy(ptr, temp); //still error...
-    return ptr;
+    // strcpy(ptr, temp); // still error...
+    // return ptr;
 
-    // return temp; //! erros
+    return temp; //! still erros
     //?cause: it returns a pointer to a local variable (result), which is allocated on the stack and gets destroyed once the function returns, thus making the returned pointer invalid.
     // todo: Instead, dynamic allocation using malloc or returning a static array would solve this problem.
 }
