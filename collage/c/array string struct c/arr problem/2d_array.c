@@ -1,3 +1,17 @@
+/*also wrong d code,,,*/
+
+/*
+There are 2 problems with the code:
+
+The declaration of the array arr in main is missing a size specification for the first dimension.
+It should be char arr[5][10] instead of char arr[][10].
+
+In the function creat_arr, the indexes of the array a are incorrect when reading the input.
+It should be scanf("\%s", &a[row][0]); instead of scanf("\%s", &a[i][j++]);
+because i and j are not being used correctly here.
+
+*/
+
 #include <stdio.h>
 #include <string.h>
 void creat_arr(int, int, char[][10]);
