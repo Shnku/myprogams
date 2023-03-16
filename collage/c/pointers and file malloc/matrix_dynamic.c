@@ -10,7 +10,7 @@ typedef struct matrix matrix;
 void get_row_col(matrix *mp)
 {
     printf("\nENTER ROW x COL SIZE:  ");
-    scanf("%d %*c %d", &mp->row, &mp->col);
+    scanf("%d %d", &mp->row, &mp->col);
 }
 
 void creat_matrix(matrix *mp)
@@ -26,8 +26,8 @@ void getdata(matrix *mp)
     {
         for (int j = 0; j < mp->col; j++)
         {
-            scanf("%d", ((mp->array + i) + j));
-            // scanf("%d", mp->array[i][j]);
+            // scanf("%d", ((mp->array + i) + j));
+            scanf("%d", &mp->array[i][j]);
         }
     }
 }
@@ -50,9 +50,10 @@ void display(matrix m)
     {
         for (int j = 0; j < m.col; j++)
         {
-            printf(" %3d", *((m.array + i) + j));
-            // printf(" %3d", m.array[i][j]);
+            // printf(" %3d", *((m.array + i) + j));
+            printf(" %3d", m.array[i][j]);
         }
+        printf("\n");
     }
 }
 
@@ -85,13 +86,11 @@ matrix_dynamic.c:53:24: warning: format ‘%d’ expects argument of type ‘int
       |                       |   |
       |                       int int *
       |                     %3ls
-matrix_dynamic.c: In function ‘main’:
-matrix_dynamic.c:65:38: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘long unsigned int’ [-Wformat=]
-   65 | izeof the matrix is: %d bytes", sizeof(m1));
-      |                      ~^         ~~~~~~~~~~
-      |                       |         |
-      |                       int       long unsigned int
-      |                      %ld
+?
+In the getdata function, the line scanf("%d", ((mp->array + i) + j));
+should be changed to scanf("%d", &mp->array[i][j]);.
+?This is because mp->array is a double pointer and
+!needs to be dereferenced twice to access its elements.
 
 ENTER ROW x COL SIZE:  3x2
 
