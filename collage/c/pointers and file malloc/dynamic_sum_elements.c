@@ -11,21 +11,21 @@ int main()
     printf("\nenter the list size:");
     scanf("%d", &size);
     pointer = malloc(size * sizeof(int));
-    getdata(pointer, size);
+    getdata(0, pointer, size);
     display(pointer, size);
     sum(pointer, size);
 
-    pointer = realloc(pointer, size + 5);
+    pointer = realloc(pointer, size + 5); // here we allocate the same pointer.
     getdata(size, pointer, size + 5);
     display(pointer, size + 5);
 
     return 0;
 }
 
-void getdata(int start=0, int *p, int count)
+void getdata(int start, int *p, int count) // Default argument values cannot be given in C. This feature is available in C++, but not in C
 {
-    printf("enter list data:\n");
-    for (i = start; i < count; i++)
+    printf("\nenter list data:\n");
+    for (int i = start; i < count; i++)
     {
         scanf("%d", p + i);
     }
