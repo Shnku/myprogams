@@ -22,10 +22,10 @@ int main()
     return 0;
 }
 
-void getdata(int i=0, int *p, int count)
+void getdata(int start=0, int *p, int count)
 {
     printf("enter list data:\n");
-    for (i = 0; i < count; i++)
+    for (i = start; i < count; i++)
     {
         scanf("%d", p + i);
     }
