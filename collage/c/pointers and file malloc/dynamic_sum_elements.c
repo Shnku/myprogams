@@ -80,8 +80,8 @@ enter list data:
 the list is:  2 3 12 5 6 2 3 1
 the sum is : 17
 the aderss of ptr[0] 0x564eaae58ac0: //same
-the aderss of ptr[1] 0x564eaae58ac4: //same
-the aderss of ptr[2] 0x564eaae58ac8: //same as before
+the aderss of ptr[1] 0x564eaae58ac4: //same 0+4
+the aderss of ptr[2] 0x564eaae58ac8: //same as before 4+4
 the aderss of ptr[3] 0x564eaae58acc: //8+4=12 = c
 the aderss of ptr[4] 0x564eaae58ad0: //12+4=16 = d0
 the aderss of ptr[5] 0x564eaae58ad4: //allocating contigious
