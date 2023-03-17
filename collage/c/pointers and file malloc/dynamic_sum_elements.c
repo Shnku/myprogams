@@ -16,7 +16,7 @@ int main()
     sum(pointer, size);
 
     pointer = realloc(pointer, size + 5);
-    getdata(pointer + size, size + 5);
+    getdata(size, pointer, size + 5);
     display(pointer, size + 5);
 
     return 0;
