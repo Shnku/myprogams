@@ -2,7 +2,7 @@
 #include <stdlib.h>
 // book  page 328
 void row_col_get(int *, int *);
-void create(int **, int, int);
+void create_1_wrong(int **, int, int);
 void getdata(int **, int, int);
 void display(int **, int, int);
 
@@ -11,7 +11,7 @@ int main()
     int **array = NULL;
     int row, col;
 
-    create(array, &row, &col);
+    create_1_wrong(array, &row, &col);
     printf("\nrow and col = %d x %d", row, col);
     getdata(array, row, col);
     display(array, row, col);
@@ -24,13 +24,13 @@ int main()
     return 0;
 }
 
-void row_col_get(int *, int *)
+void row_col_get(int *row, int *col)
 {
     printf("\nenter the row x col size: ");
     scanf("%d%d", row, col);
 }
 
-void create(int **ptr, int row, int col)
+void create_1_wrong(int **ptr, int row, int col)
 {
     printf("\nenter the row x col size: ");
     scanf("%d%d", row, col);
