@@ -18,6 +18,7 @@ mystring::mystring(char *s) {
     for(i = 0; i < strlen(s); i++)
         str[i]=*(s+i);
 }
+void mystring::show()
 
 
 int main()
