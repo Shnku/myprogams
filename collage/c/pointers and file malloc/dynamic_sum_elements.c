@@ -17,13 +17,13 @@ int main()
     for (int i = 0; i < size; i++)
         printf("\nthe aderss of pointer %p: ", pointer + i);
 
-    pointer = realloc(pointer, size + 5); // here we allocate the same pointer.
-    getdata(size, pointer, size + 5);
-    display(pointer, size + 5);
-    sum(pointer, size + 5);
+    int *pointer2 = realloc(pointer, size + 5); // here we allocate the same pointer.
+    getdata(size, pointer2, size + 5);
+    display(pointer2, size + 5);
+    sum(pointer2, size + 5);
 
     for (int i = 0; i < size + 5; i++)
-        printf("\nthe aderss of ptr[%d] %p: ", i, pointer + i);
+        printf("\nthe aderss of ptr[%d] %p: ", i, pointer2 + i);
 
     return 0;
 }
@@ -88,3 +88,4 @@ the aderss of ptr[5] 0x564eaae58ad4: //allocating contigious
 the aderss of ptr[6] 0x564eaae58ad8:
 the aderss of ptr[7] 0x564eaae58adc:
 */
+/*still allocating contigious if allocate another pointer...*/
