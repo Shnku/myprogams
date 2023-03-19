@@ -61,7 +61,8 @@ void shift_array_right(int *a, int size, int count)
     while (count)
     {
         int temp = a[size - 1];
-        for (int i = 0; i < size - 1; i++)
+       // for (int i = 1; i < size - 1; i++)
+        for (int i=size; i>0; i--)
         {
             printf("\na[%d] <- a[%d] // %d -< %d", i, i + 1, a[i], a[i - 1]);
             a[i] = a[i - 1];
