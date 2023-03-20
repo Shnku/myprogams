@@ -19,7 +19,9 @@ int main()
     shift_array_left(array, size);
     printf("\nafter: ");
     display(array, size);
-
+    shift_array_right(array, size, 2);
+    printf("\nafter: ");
+    display(array, size);
     return 0;
 }
 
