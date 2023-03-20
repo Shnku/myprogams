@@ -1,5 +1,5 @@
 #include <iostream>
-using namespace std;
+// using namespace std;
 
 class mystring
 {
@@ -26,7 +26,7 @@ mystring::mystring(char s[])
 
 void mystring::show()
 {
-    cout << str << endl;
+    std::cout << str << std::endl;
 }
 
 mystring operator+(mystring s1, mystring s2)
