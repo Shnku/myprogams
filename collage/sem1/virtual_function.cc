@@ -10,7 +10,7 @@ public:
     in the baseclass
     in the baseclass
     */
-    virtual void func() { cout << "\nin the baseclass"; }
+    void virtual func() { cout << "\nin the baseclass"; }
     /*
     in the baseclass
     IN THE DERIVEDCLAS
