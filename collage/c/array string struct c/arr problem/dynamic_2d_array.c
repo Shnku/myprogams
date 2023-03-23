@@ -11,6 +11,7 @@ int main()
     int **array = NULL;
     int row, col;
 
+    row_col_get(row, col);
     create_1_wrong(array, &row, &col);
     printf("\nrow and col = %d x %d", row, col);
     getdata(array, row, col);
@@ -32,8 +33,8 @@ void row_col_get(int *row, int *col)
 
 void create_1_wrong(int **ptr, int row, int col)
 {
-    printf("\nenter the row x col size: ");
-    scanf("%d%d", row, col);
+    // printf("\nenter the row x col size: ");
+    // scanf("%d%d", row, col);
 
     *ptr = malloc(row * sizeof(int *));
     for (int i = 0; i < row; i++)
