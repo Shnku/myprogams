@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 // book  page 328
-void row_col_get(int *, int *);
+void get_row_col(int *, int *);
 // void create_1_wrong(int **, int, int); //wrong...
-int **creat_matrix(int, int);
+int **creat_matrix_space(int, int);
 void getdata(int **, int, int);
 void display(int **, int, int);
 
@@ -12,9 +12,9 @@ int main()
     int **array = NULL;
     int row, col;
 
-    row_col_get(&row, &col);
+    get_row_col(&row, &col);
     // create_1_wrong(array, &row, &col);
-    array = creat_matrix(row, col);
+    array = creat_matrix_space(row, col);
     printf("\nrow and col = %d x %d", row, col);
     printf("\nenter matrix data:====\n");
     getdata(array, row, col);
@@ -28,13 +28,13 @@ int main()
     return 0;
 }
 
-void row_col_get(int *row, int *col)
+void get_row_col(int *row, int *col)
 {
     printf("\nenter the row x col size: ");
     scanf("%d%d", row, col);
 }
 
-int **creat_matrix(int row, int col)
+int **creat_matrix_space(int row, int col)
 {
     int **ptr;
     ptr = calloc(row, sizeof(int *));
