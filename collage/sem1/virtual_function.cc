@@ -9,11 +9,21 @@ public:
     /*
     in the baseclass
     in the baseclass
+
+    IN THE DERIVEDCLASS
+    in the baseclass
+    IN THE DERIVEDCLASS
+    in the baseclass
     */
     void virtual func() { cout << "\nin the baseclass"; }
     /*
     in the baseclass
     IN THE DERIVEDCLAS
+
+    IN THE DERIVEDCLASS
+    in the baseclass
+    IN THE DERIVEDCLASS
+    in the baseclass
     */
     ~baseclass() {}
 };
@@ -40,6 +50,10 @@ int main()
 
     dp = &d;
     dp->func();
+
+    b.func();
+    d.func();
+    d.baseclass::func();
 
     return 0;
 }
