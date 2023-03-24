@@ -76,3 +76,23 @@ void display(int **ptr, int row, int col)
         printf("\n");
     }
 }
+
+/*output*/
+/*
+enter the row x col size: 3
+2
+
+row and col = 3 x 2
+enter matrix data:====
+1
+2
+3
+4
+5
+6
+
+displaying the array
+ 1  2
+ 3  4
+ 5  6
+*/
