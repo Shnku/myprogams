@@ -13,10 +13,26 @@ void get_row_col(matrix *mp)
     scanf("%d %d", &mp->row, &mp->col);
 }
 
-void creat_matrix(matrix *mp)
+// int **creat_matrix_space(int row, int col)
+// {
+//     int **ptr;
+//     ptr = calloc(row, sizeof(int *));
+//     for (int i = 0; i < row; i++)
+//     {
+//         ptr[i] = calloc(col, sizeof(int));
+//     }
+//     return ptr;
+// }
+
+void get_matrix_space(matrix *mp)
 {
+    // int **mat;
+    mp->array = malloc(mp->row * sizeof(int *));
     for (int i = 0; i < mp->row; i++)
-        mp->array[i] = malloc(mp->row * sizeof(int));
+    {
+        mp->array[i] = malloc(mp->col * sizeof(int));
+    }
+    // mp->array = mat; //same...
 }
 
 void getdata(matrix *mp)
@@ -62,12 +78,37 @@ int main()
     matrix m1;
     get_row_col(&m1);
     printf("\n row and col is : ___ %d x %d __", m1.row, m1.col);
-    creat_matrix(&m1);
+    get_matrix_space(&m1);
     printf("\nsizeof the matrix is: %d bytes", sizeof(m1));
     getdata(&m1);
     display(m1);
     return 0;
 }
+
+/*
+after correction
+/*
+ENTER ROW x COL SIZE:  3
+3
+
+ row and col is : ___ 3 x 3 __
+sizeof the matrix is: 16 bytes
+ENTER THE MATRIX ELEMENTS--------
+1
+2
+3
+4
+5
+6
+7
+8+9
+
+_____DISPLAYING THE MATRIX_____
+   1   2   3
+   4   5   6
+   7   8   9
+
+*/
 
 /*
 output
