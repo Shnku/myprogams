@@ -10,8 +10,10 @@ int main()
     printf("\nenter the string: ");
     fgets(string, 50, stdin);
     printf("\nenter the word to search: ");
-    fgets(word, sizeof(word), stdin);
-    word[strcspn(word, "\n")] = '\0';
+    // fgets(word, sizeof(word), stdin);
+    // word[strcspn(word, "\n")] = '\0';
+    // word[strlen(word) - 1] = '\0';
+    scanf("%s", word);
     string_search(string, word);
     // printf("\n%s", flag ? "found" : "not found");
 
