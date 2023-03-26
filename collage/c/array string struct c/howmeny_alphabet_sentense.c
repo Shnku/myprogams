@@ -33,10 +33,6 @@ void no_of_alpha(char *sen, int *count)
                 continue;
             }
         }
-        // if (sen[i]=)
-        // {
-        //     /* code */
-        // }
     }
 }
 
