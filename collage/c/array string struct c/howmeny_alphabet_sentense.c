@@ -16,7 +16,7 @@ int main()
     no_of_alpha(str, cnt);
 
     for (int i = 0; i < 30; i++)
-        printf("\ncnt[%d]=%d", i, cnt[i]);
+        printf("\ncnt[%d]= %c ....%d times", i, str[i], cnt[i]);
 
     return 0;
 }
@@ -30,8 +30,13 @@ void no_of_alpha(char *sen, int *count)
             if (sen[i] == sen[j])
             {
                 count[i]++;
+                continue;
             }
         }
+        // if (sen[i]=)
+        // {
+        //     /* code */
+        // }
     }
 }
 
