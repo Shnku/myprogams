@@ -59,4 +59,9 @@ what  is happenning ...
 complring the
              & the
 ?this is printed like this....
+todo: fgets() scans the '\n'... use scanf instead ...to scan only a word.. other ways..
+    * word[strcspn(word, "\n")] = '\0';
+    * word[strlen(word) - 1] = '\0';
+
+and in line 51 i++ is must....cause after detecting the ' ' it must have to increment i ti ger the pointed to ' ' +1 ts position...
 */

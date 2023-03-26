@@ -18,7 +18,6 @@ void concatinate(char a[], char b[], char *ptr)
     temp[size] = '\0';
     strcpy(ptr, temp);
 }
-char *ptr;
 
 int main()
 {
