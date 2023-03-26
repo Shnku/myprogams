@@ -22,33 +22,37 @@ int main()
 
 void string_search(char *str, char *word)
 {
-    int i = 0;
+    // int i = 0;
     char temp[10];
-    while (str[i] != '\0')
+    while (*str) //(s[i]!='\0')
     {
         int j = 0;
 
         while (1)
         {
-            if (str[i] == ' ' || str[i] == '\0')
+            if (*str == ' ' || *str == '\0')
+                //(str[i] == ' ' || str[i] == '\0')
                 break;
-            printf("\ntemp[%d]=%c", j, str[i]);
-            temp[j++] = str[i++];
+            printf("\ntemp[%d]=%c", j, *str);
+            // temp[j++] = str[i++];
+            temp[j] = *str;
+            j++, str++;
         }
         temp[j] = '\0';
 
-        printf("\n__temp=%s", temp);
-        printf("\n__word=%s", word);
+        printf("\n__temp__=%s", temp);
+        printf("\n__word__=%s", word);
 
         if (strcmp(word, temp) == 0) // only last line compared
         {
             printf("\ncomplring %s & %s", temp, word);
-            printf("\nword found\n");
+            printf("\n____word found_____\n");
             break;
         }
         else
             printf("\nnot found\n");
-        i++;
+        // i++;
+        str++;
     }
 }
 

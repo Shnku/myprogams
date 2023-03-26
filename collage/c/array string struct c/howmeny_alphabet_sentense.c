@@ -1,4 +1,5 @@
 #include <stdio.h>
+int *no_of_alpha(char *);
 
 int main()
 {
@@ -7,4 +8,14 @@ int main()
     fgets(str, 50, stdin);
 
     return 0;
+}
+
+int *no_of_alpha(char *sen)
+{
+    int *arr, i = 0;
+    while (*sen)
+    {
+        
+        sen++;
+    }
 }

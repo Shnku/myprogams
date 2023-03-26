@@ -7,9 +7,6 @@ void creat_manual_sized_arr(int[], int *size);
 void creat_dma_arr(int[], int dynamicsize);
 void disp_arr(int[], int size);
 
-void arr_rev(int[], int size);
-void arr_rev_ptr(int *, int size);
-
 /*
 int main()
 {
