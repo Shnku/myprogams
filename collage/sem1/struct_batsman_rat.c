@@ -22,6 +22,13 @@ int main()
         scanf("%d%f", &plr[i].run, &plr[i].value);
         // fflush(stdin);
         getchar();
+        /*
+        !However, there is a potential issue in this code related to the use of fgets and scanf together to read input.
+        The fgets function reads the input until a newline character is encountered, which is included in the string.
+        On the other hand, the scanf function reads the input until it finds whitespace and leaves the newline character in the input buffer.
+        This can cause issues if there are additional input commands after scanf.
+        Todo : it's recommended to clear the input buffer after reading input using scanf, such as by calling getchar or fflush(stdin)
+        */
     }
 
     printf("the palyer details are: \n\n");
@@ -47,3 +54,5 @@ int main()
     printf("\nname: %s, run: %d, value: %f", plr[max_i].name, plr[max_i].run, plr[max_i].value);
     return 0;
 }
+// One potential issue in the code is the use of fgets to read in the player's name. 
+//It is important to note that fgets includes the newline character in the input string, which can cause problems if not handled properly
