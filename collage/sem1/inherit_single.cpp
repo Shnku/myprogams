@@ -9,10 +9,11 @@ protected:
 
 public:
     account() {}
-    account(int i, float s)
-    {
-        id = i, salary = s;
-    }
+    account(int i, float s) : id(i), salary(s) {} // same..
+    // account(int i, float s)
+    // {
+    //     id = i, salary = s;
+    // }
     void show_account()
     {
         cout << "\nid: " << id << "\nsalary: " << salary;
