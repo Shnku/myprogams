@@ -3,9 +3,11 @@ using namespace std;
 
 class Shape
 {
-public:
+protected:
     int a;
     int b;
+
+public:
     void get_data(int n, int m)
     {
         a = n;
@@ -37,18 +39,18 @@ int main()
 {
     Rectangle r;
     Triangle t;
-    int length, breadth, base, height;
+    int len, wid, base, high;
 
-    cout << "Enter the length and breadth of a rectangle: ";
-    cin >> length >> breadth;
-    r.get_data(length, breadth);
+    cout << "Enter the len and wid of a rectangle: ";
+    cin >> len >> wid;
+    r.get_data(len, wid);
 
     float m = r.rect_area();
     cout << "Area of the rectangle is: " << m << endl;
 
-    cout << "Enter the base and height of the triangle: ";
-    cin >> base >> height;
-    t.get_data(base, height);
+    cout << "Enter the base and high of the triangle: ";
+    cin >> base >> high;
+    t.get_data(base, high);
 
     float n = t.triangle_area();
     cout << "Area of the triangle is : " << n << endl;
@@ -57,10 +59,10 @@ int main()
 }
 
 /*
-Enter the length and breadth of a rectangle: 4
+Enter the len and wid of a rectangle: 4
 5
 Area of the rectangle is: 20
-Enter the base and height of the triangle: 3
+Enter the base and high of the triangle: 3
 2
 Area of the triangle is : 3
 */

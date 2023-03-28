@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 class A
 {
 protected:
@@ -18,7 +17,7 @@ class B : public A
 {
 protected:
     int b; // int a;
-public:    // get_a();
+public:
     void get_b()
     {
         cout << "Enter the value of 'b' : " << endl;
@@ -51,7 +50,7 @@ public:
         get_b();
         get_c();
         d = a * b * c;
-        cout << "Multiplication of a, b, c is: " << endl;
+        cout << "Multiplication of a, b, c is: " << d << endl;
     }
 };
 
