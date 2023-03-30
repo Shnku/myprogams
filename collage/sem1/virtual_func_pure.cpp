@@ -7,23 +7,34 @@ protected:
     int value;
 
 public:
-    number(int n) : value(n) {}
+    number() {}
+    number(int);
     virtual void display() = 0;
 };
 
 class hextype : public number
 {
 public:
-    hextype(int k) : number(k) {}
-    void display() { cout << hex << value << endl; }
+    hextype() {}
+    hextype(int);
+    void display();
 };
 
 class dectype : public number
 {
 public:
-    dectype(int p) : number(p) {}
-    void display() { cout << dec << value << endl; }
+    dectype() {}
+    dectype(int);
+    void display();
 };
+
+number::number(int n) : value(n) {}
+
+hextype::hextype(int k) : number(k) {}
+void hextype::display() { cout << hex << value << "\n"; }
+
+dectype::dectype(int k) : number(k) {}
+void dectype::display() { cout << dec << value << "\n"; }
 
 int main()
 {
