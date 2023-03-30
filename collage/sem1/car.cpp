@@ -19,7 +19,7 @@ public:
 		cin >> price;
 	}
 
-	void calc_tax()
+	void calc_tax() 
 	{
 		if (l > 12)
 			tax = price * 14 / 100;
