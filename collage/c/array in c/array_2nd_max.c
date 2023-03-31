@@ -19,10 +19,10 @@ int find_2nd_max(int *arr, int n)
 {
     int mx_1 = arr[0];
     int mx_2 = arr[1];
-    if (mx_1 < mx_2)
-    {
-        swap(&mx_1, &mx_2);
-    }
+
+    (mx_1 < mx_2) ? swap(&mx_1, &mx_2) : 0;
+    // if (mx_1 < mx_2)   swap(&mx_1, &mx_2);
+
     for (int i = 2; i < n; i++)
     {
         if (mx_1 < arr[i])
@@ -46,11 +46,25 @@ void swap(int *x, int *y)
 
 /*
 _ENTER THE ARRAY ELEMENTS___
-1
-5
-44
-2
-55
+1 5 44 2 55
 
 the 2nd max value of the array is: 55
+*/
+/*
+_ENTER THE ARRAY ELEMENTS___
+1 2 5 4 3
+
+the 2nd max value of the array is: 5
+*/
+/*
+_ENTER THE ARRAY ELEMENTS___
+1 6 2 4 5
+
+the 2nd max value of the array is: 5
+*/
+/*
+_ENTER THE ARRAY ELEMENTS___
+10 11 5 6 14 13
+
+the 2nd max value of the array is: 14
 */
