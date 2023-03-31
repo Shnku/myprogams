@@ -15,7 +15,7 @@ void display_array(int *array, int size)
     printf("\n__DISPLAYING THE ARRAY__ : ");
     for (int i = 0; i < size; i++)
     {
-        printf(" %d ", array[i]);
+        printf(" %3d", array[i]);
     }
 }
 
@@ -39,7 +39,7 @@ void display_2d_array_data(int **ptr, int row, int col)
     {
         for (int j = 0; j < col; j++)
         {
-            printf(" %d ", ptr[i][j]);
+            printf(" %3d", ptr[i][j]);
         }
         printf("\n");
     }
