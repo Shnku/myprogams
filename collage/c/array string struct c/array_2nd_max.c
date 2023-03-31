@@ -19,34 +19,24 @@ int find_2nd_max(int *arr, int len)
     int max = arr[0];
     int max_2 = arr[0];
     int previous = 0;
+
     for (int i = 0; i < len; i++)
     {
-        printf("\n %d < %d \?", max, arr[i]);
         if (max < arr[i])
-        {
-            printf("\n %d <<= %d", max, arr[i]);
             max = arr[i];
-        }
-        printf("\n");
     }
     for (int i = 0; i < len + 1; i++)
     {
-        printf("\n %d == %d \?", max_2, max);
         if (max_2 == max)
         {
-            printf("\nyes max_2 = previous = %d", previous);
             max_2 = previous;
             break;
         }
-        printf("\n %d < %d \?", max_2, arr[i]);
         if (max_2 < arr[i])
         {
-            printf("\nprevious=max_2, %d<= %d", previous, max_2);
             previous = max_2;
-            printf("\n %d <<= %d", max_2, arr[i]);
             max_2 = arr[i];
         }
-        printf("\n");
     }
     return max_2;
 }
