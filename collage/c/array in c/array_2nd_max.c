@@ -15,7 +15,7 @@ int main()
     return 0;
 }
 
-int find_2nd_max(int arr[], int n)
+int find_2nd_max(int *arr, int n)
 {
     int mx_1 = arr[0];
     int mx_2 = arr[1];
