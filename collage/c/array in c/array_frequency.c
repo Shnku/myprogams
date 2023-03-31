@@ -10,10 +10,11 @@ int main()
 {
     int arr[SIZE];
     int tmp[SIZE], cnt[SIZE];
+    
     get_array_data(arr, SIZE);
-    int size = store_frequency(arr, SIZE, tmp, cnt);
-    display_array(tmp, size);
-    display_array(cnt, size);
+    int new_size = store_frequency(arr, SIZE, tmp, cnt);
+    display_array(tmp, new_size);
+    display_array(cnt, new_size);
 
     return 0;
 }
