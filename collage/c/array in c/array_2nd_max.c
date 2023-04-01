@@ -44,29 +44,28 @@ void swap(int *x, int *y)
     *x = *y, *y = t;
 }
 
-/*
+//! How To Use #if 0 ... #endif To Remove Code For Debugging
+
+#if 0
 _ENTER THE ARRAY ELEMENTS___
 1 5 44 2 55
 
 the 2nd max value of the array is: 55
-*/
-/*
+
 _ENTER THE ARRAY ELEMENTS___
 1 2 5 4 3
 
 the 2nd max value of the array is: 5
-*/
-/*
 _ENTER THE ARRAY ELEMENTS___
 1 6 2 4 5
 
 the 2nd max value of the array is: 5
-*/
-/*
+
 _ENTER THE ARRAY ELEMENTS___
 10 11 5 6 14 13
 
 the 2nd max value of the array is: 14
-*/
+
 
 //! tosolve it do else if.....or put the 2nd if first...
+#endif
