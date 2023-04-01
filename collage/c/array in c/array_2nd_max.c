@@ -30,7 +30,7 @@ int find_2nd_max(int *arr, int n)
             mx_2 = mx_1;
             mx_1 = arr[i];
         }
-        if (mx_2 < mx_1 && mx_2 < arr[i])
+        else if (mx_2 < mx_1 && mx_2 < arr[i])
         {
             mx_2 = arr[i];
         }
@@ -68,3 +68,5 @@ _ENTER THE ARRAY ELEMENTS___
 
 the 2nd max value of the array is: 14
 */
+
+//! tosolve it do else if.....or put the 2nd if first...
