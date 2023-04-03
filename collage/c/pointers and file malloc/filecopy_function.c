@@ -26,13 +26,14 @@ void file_copy(char *f1, char *f2)
     fclose(cpy);
 }
 
+#ifdef 0
 int main()
 {
     printf("\ncopyingfile1 to file2:\n");
     file_copy("file1.txt", "file2.txt");
     return 0;
 }
-
+#endif
 /*
 // function to copy a file to another...//!wrong..
 void file_copy(FILE *open, char *nm1, FILE *to_copy, char *nm2)
