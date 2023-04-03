@@ -1,1 +1,0 @@
-open = fopen(open_filenm, "r")
