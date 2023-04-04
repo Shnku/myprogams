@@ -9,7 +9,7 @@ protected:
     T dimension_x, dimension_y;
 
 public:
-    shape2d(T x, T y)
+    shape2d(T x, T y = 0)
     {
         dimension_x = x;
         dimension_y = y;
@@ -25,10 +25,10 @@ protected:
     T dimension_z;
 
 public:
-    shape3d(T x, T y, T z)
+    shape3d(T x, T y = 0, T z = 0) : shape2d<T>(x, y)
     {
-        shape2d<T>::dimension_x = x;
-        shape2d<T>::dimension_y = y;
+        // shape2d<T>::dimension_x = x; //giving erreor no matching function.
+        // shape2d<T>::dimension_y = y;
         dimension_z = z;
     }
     T volume()
@@ -90,6 +90,15 @@ public:
 };
 
 template <typename T>
+class circle : public shape2d<T>
+{
+public:
+    circle(T r) : shape2d<T>(r) {}
+    T perimeter() { return M_PI * 2 * shape2d<T>::dimension_x; }
+    T area() { return M_PI * pow(shape2d<T>::dimension_x, 2); }
+};
+
+template <typename T>
 class cubeoid : public shape3d<T>
 {
 public:
@@ -101,6 +110,14 @@ class cube : public cubeoid<T>
 {
 public:
     cube(T a) : cubeoid<T>(a, a, a) {}
+};
+
+template <typename T>
+class sphere : public shape3d<T>
+{
+public:
+    sphere(T r) : shape3d<T>(r, r, r) {}
+    T volume() { return 4 / 3 * M_PI * pow(shape3d<T>::volume(), 2); }
 };
 
 //
@@ -115,6 +132,13 @@ int main()
     triangle<float> t1(4, 4, 2);
     cout << "\narea: " << t1.area();
     cout << "\nprri: " << t1.perimeter();
+
+    sphere<float> s(3);
+    cout << "\nvolume is: " << s.volume();
+
+    circle<float> c(3);
+    cout << "\nperimeter of circle: " << c.perimeter();
+    cout << "\narea of circle: " << c.area();
 
     return 0;
 }
