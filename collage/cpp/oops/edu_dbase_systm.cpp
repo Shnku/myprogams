@@ -16,6 +16,7 @@ public:
         getline(cin, name);
     }
 };
+
 // 3 derived class...
 class teacher : public staff
 {
@@ -31,6 +32,7 @@ public:
         getline(cin, publication);
     }
 };
+
 class typist : public staff
 {
     int speed;
@@ -43,6 +45,7 @@ public:
     }
     void get_speed() { cout << "\nspeed is: " << speed; }
 };
+
 class officer : public staff
 {
     int grade;
@@ -55,10 +58,12 @@ public:
     }
     void get_grade() { cout << "\ngrade is: " << grade; }
 };
+
 // derived of typist class....
 class regular : public typist
 {
 };
+
 class casual : public typist
 {
     bool daily;
@@ -73,7 +78,6 @@ public:
         cin >> wages;
     }
 };
-
 
 //.....this is the main function......
 int main()
