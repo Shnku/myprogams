@@ -142,3 +142,17 @@ int main()
 
     return 0;
 }
+
+
+/*
+when not using templates, we do not need to specify the base class name to access its member variables. 
+This is because the name of the base class is known at compile-time, 
+so the compiler can look up the member variables of the base class.
+
+However, when using templates, 
+the base class name is not known until the template is instantiated, which happens at runtime. 
+Therefore, we need to use the shape2d<T>:: notation to tell the compiler to look up the dimension_y member variable of the base class shape2d<T> at runtime.
+
+In summary, 
+when using templates, we need to use the shape2d<T>:: notation to access the member variables of the base class because the base class name is not known until the template is instantiated at runtime.
+*/
