@@ -2,7 +2,8 @@
 
 /*
 So, to summarize, the syntax char tensRoman[][] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"} is not valid in C.
-You need to specify the size of the second dimension explicitly when declaring a 2D array
+You need to specify the size of the second dimension explicitly when declaring a 2D array of 
+!strings
 */
 char roman_akok[][4] = {"", "I", "II", "III", "IV", "V", "VII", "VIII", "IX"};
 char *roman_doshok[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
