@@ -47,12 +47,10 @@ void to_roman(int no)
     printf("\nI=1\nV=5\nX=10\nL=50\nC=100\nD=500\nM=1000\n#=5000\n@=10000");
 }
 
-/*OUTPUT*
-/*
+#if 0
+
 enter the umber: 524
-
 THE ROMAN VERSION IS____ DXXIV
-
 __CONVERSION CHART__
 I=1
 V=5
@@ -61,6 +59,7 @@ L=50
 C=100
 D=500
 M=1000
-#=5000
+#= 5000
 @=10000
-*/
+
+#endif
