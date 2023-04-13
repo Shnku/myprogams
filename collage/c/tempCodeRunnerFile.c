@@ -1,1 +1,3 @@
-=1\nV=5\nX=10\n
+        printf("\nthe roman is:: C");
+        exit(EXIT_SUCCESS);
+    
