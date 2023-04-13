@@ -24,7 +24,7 @@ void to_roman(int no)
  You need to specify the size of the second dimension explicitly when declaring a 2D array of
  !strings
  */
-    char roman_akok[][4] = {"", "I", "II", "III", "IV", "V", "VII", "VIII", "IX"};
+    char roman_akok[][4] = {"", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"};
     char *roman_doshok[] = {"", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"};
     char roman_shotok[][4] = {"", "C", "CC", "CCC", "CD", "D", "D", "DC", "DCC", "DCCC", "CM"};
     char roman_hajar[][4] = {"", "M", "MM", "MMM", "M#", "#", "#M", "#MM", "#MMM", "M@"};
@@ -41,7 +41,8 @@ void to_roman(int no)
     int shotok = rem / 100;
     rem = rem % 100;
     int doshok = rem / 10;
-    int akok = rem % 10;
+    rem = rem % 10;
+    int akok = rem;
 
     printf("%s", roman_hajar[hajar]);
     printf("%s", roman_shotok[shotok]);
@@ -137,7 +138,7 @@ void change_to_roamn_not_using_list(int no)
 
 enter the umber: 99
 
-THE ROMAN VERSION IS____ XC0
+THE ROMAN VERSION IS____ XCIX
 
 __CONVERSION CHART__
 I=1
