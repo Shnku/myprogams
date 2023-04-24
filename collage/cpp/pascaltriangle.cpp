@@ -42,6 +42,15 @@ int main()
 }
 
 
+// _or_ direct combination.........
+int nCr(int n, int r)
+{
+    if(n==r || r==0) 
+        return 1;
+    else
+        return (nCr(n-1, r-1) + nCr(n-1, r));
+}
+
 
     // cout << f(5) << endl;
     // cout << f(2) << endl;
