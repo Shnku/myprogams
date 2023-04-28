@@ -41,7 +41,7 @@ class CP_SP {
 public class exercise_mix {
 
     public static void main(String[] args) {
-        quardratic_eq myequation = new quardratic_eq(3, 5, 2);
+        quardratic_eq myequation = new quardratic_eq(1, 5, 6);
         System.out.println("the root is: " + myequation.find_root());
 
         CP_SP mysell = new CP_SP(45000, 55000);
@@ -53,7 +53,7 @@ public class exercise_mix {
 // output....
 /*
  * javac exercise_mix.java && java exercise_mix
- * the root is: -0.6666666666666666
+ * the root is: -2.0
  * net : 10000.0
  * 
  */
