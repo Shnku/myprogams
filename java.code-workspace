@@ -8,6 +8,9 @@
 		"files.associations": {}
 	},
 	"extensions": {
-		"recommendations": []
-	}
+		"recommendations": [],
+		"disabledExtensions": [
+			"ms-vscode.cpptools"
+		]
+	},
 }
