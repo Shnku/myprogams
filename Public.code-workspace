@@ -8,5 +8,8 @@
 		"files.associations": {
 			"cmath": "cpp"
 		}
+	},
+	"extensions": {
+		"recommendations": []
 	}
 }

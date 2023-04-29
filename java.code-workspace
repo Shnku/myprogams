@@ -1,12 +1,13 @@
 {
 	"folders": [
 		{
-			"path": "."
+			"path": "./collage/java"
 		}
 	],
 	"settings": {
-		"files.associations": {
-			"cmath": "cpp"
-		}
+		"files.associations": {}
+	},
+	"extensions": {
+		"recommendations": []
 	}
 }
