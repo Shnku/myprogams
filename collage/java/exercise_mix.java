@@ -6,7 +6,7 @@ class quardratic_eq {
         this.c = c;
         this.b = b;
         this.a = a;
-    }
+    } // there is no default argument in java...
 
     double find_root() {
         double root;
