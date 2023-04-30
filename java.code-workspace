@@ -1,16 +1,8 @@
 {
 	"folders": [
 		{
-			"path": "./collage/java"
+			"path": "collage/myjava"
 		}
 	],
-	"settings": {
-		"files.associations": {}
-	},
-	"extensions": {
-		"recommendations": [],
-		"disabledExtensions": [
-			"ms-vscode.cpptools"
-		]
-	},
+	"settings": {}
 }
