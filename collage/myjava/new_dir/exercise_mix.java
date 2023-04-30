@@ -1,43 +1,8 @@
-package p1_exercise;
+package pkg1;
 
 import java.util.Scanner;
-
-class quardratic_eq {
-    double c, b, a;
-
-    quardratic_eq(double a, double b, double c) {
-        this.c = c;
-        this.b = b;
-        this.a = a;
-    } // there is no default argument in java...
-
-    double[] find_root() {
-        double root[] = new double[2];
-        root[0] = (-b + Math.sqrt(b * b - 4 * a * c)) / (2 * a);
-        root[1] = (-b - Math.sqrt(b * b - 4 * a * c)) / (2 * a);
-        return root;
-    }
-}
-
-class CP_SP_exercise {
-    double cost, sell;
-    double profit, loss;
-
-    CP_SP_exercise(double cost, double sell) {
-        this.cost = cost;
-        this.sell = sell;
-    }
-
-    double profit_loss() {
-        if (sell < cost) {
-            loss = cost - sell;
-            return loss / cost * 100;
-        } else {
-            profit = sell - cost;
-            return profit / cost * 100;
-        }
-    }
-}
+import pkg1.quardratic_eq;
+import pkg1.CP_SP_exercise;
 
 /**
  * exercise_mix
