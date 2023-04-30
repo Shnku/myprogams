@@ -69,7 +69,7 @@ public class exercise_mix {
  * net : 10000.0
  * 
  * 
- * //after using rerturining array ....
+ * //after using rerturining array ....//foreach...
  * javac exercise_mix.java && java exercise_mix
  * the roots are: -2.0
  * the roots are: -3.0
