@@ -3,7 +3,7 @@ package pkg1;
 public class quardratic_eq {
     double c, b, a;
 
-    quardratic_eq(double a, double b, double c) {
+    public quardratic_eq(double a, double b, double c) {
         this.c = c;
         this.b = b;
         this.a = a;

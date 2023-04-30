@@ -4,7 +4,7 @@ public class CP_SP_exercise {
     double cost, sell;
     double profit, loss;
 
-    CP_SP_exercise(double cost, double sell) {
+    public CP_SP_exercise(double cost, double sell) {
         this.cost = cost;
         this.sell = sell;
     }
