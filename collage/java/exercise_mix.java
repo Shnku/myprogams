@@ -45,9 +45,16 @@ public class exercise_mix {
         quardratic_eq myequation = new quardratic_eq(1, 5, 6);
 
         double arr_of_roots[] = myequation.find_root();
-        for (double d : arr_of_roots) {
-            System.out.println("the roots are: " + d);
+        /*
+         * //using for each loop/.....
+         * for (double d : arr_of_roots) {
+         * System.out.println("the roots are: " + d);
+         * }
+         */
+        for (int i = 0; i < arr_of_roots.length; i++) {
+            System.out.println("the " + (i + 1) + "st root is: " + arr_of_roots[i]);
         }
+        // if not using (i+1) the it put them differently...
 
         CP_SP mysell = new CP_SP(45000, 55000);
         System.out.println("net : " + mysell.profit_loss());
