@@ -1,3 +1,5 @@
+package p1_exercise;
+
 import java.util.Scanner;
 
 class quardratic_eq {
