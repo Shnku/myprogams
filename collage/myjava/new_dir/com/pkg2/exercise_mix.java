@@ -1,7 +1,6 @@
 package com.pkg2;
 
 import java.util.Scanner;
-
 import com.pakg1st.*;
 
 /**
