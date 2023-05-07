@@ -1,12 +1,13 @@
+package pkg2;
+
 import java.util.Scanner;
 
-import pkg1.CP_SP_exercise;
-import pkg1.quardratic_eq;
+import pakg1st.*;
 
 /**
  * exercise_mix
  */
-public class exercise_mix {
+class exercise_mix {
 
     public static void main(String[] args) {
 

@@ -1,4 +1,4 @@
-package pkg1;
+package pakg1st;
 
 public class quardratic_eq {
     double c, b, a;

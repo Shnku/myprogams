@@ -1,4 +1,4 @@
-package pkg1;
+package pakg1st;
 
 public class CP_SP_exercise {
     double cost, sell;
