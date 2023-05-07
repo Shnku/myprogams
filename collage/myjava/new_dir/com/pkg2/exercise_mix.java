@@ -1,8 +1,8 @@
-package pkg2;
+package com.pkg2;
 
 import java.util.Scanner;
 
-import pakg1st.*;
+import com.pakg1st.*;
 
 /**
  * exercise_mix

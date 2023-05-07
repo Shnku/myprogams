@@ -1,7 +1,7 @@
-package pakg1st;
+package com.pakg1st;
 
 public class quardratic_eq {
-    double c, b, a;
+    protected double c, b, a;
 
     public quardratic_eq(double a, double b, double c) {
         this.c = c;
