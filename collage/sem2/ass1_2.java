@@ -11,11 +11,10 @@ public class ass1_2 {
 
         Console inp = System.console();
         System.out.println("Enter the number: ");
-        // float data = Float.parseFloat(inp.readLine());
-        String data = inp.readLine();
+        float data = Float.parseFloat(inp.readLine());
         System.out.println("The string before: " + data);
 
-        // String convert = style.format(data);
+        // String convert = style.format(data); //!not string 
         // System.out.println("After converting the no is: " + convert);
         System.out.println("After converting the no is: " + style.format(data));
 
