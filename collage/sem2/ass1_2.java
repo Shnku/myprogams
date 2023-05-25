@@ -5,7 +5,7 @@ import java.io.Console;
 import java.text.DecimalFormat;
 
 public class ass1_2 {
-    final static DecimalFormat style = new DecimalFormat("####");
+    final static DecimalFormat style = new DecimalFormat("####.");
 
     public static void main(String[] args) throws Exception {
 
@@ -14,9 +14,17 @@ public class ass1_2 {
         float data = Float.parseFloat(inp.readLine());
         System.out.println("The string before: " + data);
 
-        // String convert = style.format(data); //!not string 
+        // String convert = style.format(data); //!not string
         // System.out.println("After converting the no is: " + convert);
         System.out.println("After converting the no is: " + style.format(data));
 
     }
 }
+
+/* output */
+/*
+ * Enter the number:
+ * 45.23
+ * The string before: 45.23
+ * After converting the no is: 45.
+ */
