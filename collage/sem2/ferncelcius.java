@@ -2,7 +2,6 @@
 C = (F-32)/1.8
 */
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class ferncelcius {
@@ -10,20 +9,21 @@ public class ferncelcius {
     static float cel;
 
     ferncelcius(float val) { // !constrctor can't made static..
-        this.cel = val;
+        // this.cel = val; //? need classname.variable
+        cel = val;
     }
 
     static float convert() {
         return (float) ((cel - 32) / 1.8); // ?typecasting needed..
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
 
         float val;
         System.out.println("Enert te Farenhite : ");
-        Scanner sc = new Scanner(System.in);
-        val = sc.nextFloat();
-
+        try (Scanner sc = new Scanner(System.in)) {
+            val = sc.nextFloat();
+        }
         // ferncelcius(val); //!error...
         new ferncelcius(val);
         float cov = ferncelcius.convert();
@@ -31,3 +31,10 @@ public class ferncelcius {
         System.out.println("THE Censius VAL IS ;' " + cov);
     }
 }
+
+// output..
+/*
+ * Enert te Farenhite :
+ * 212
+ * THE Censius VAL IS ;' 100.0
+ */
