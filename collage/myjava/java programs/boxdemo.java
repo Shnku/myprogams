@@ -1,6 +1,6 @@
 import java.io.Console;
 
-class box2 {
+class box2 { // naming it box conflicts with previous box.class fiile..
     float len, width, height;
 
     box2(float len, float wid, float hei) {
