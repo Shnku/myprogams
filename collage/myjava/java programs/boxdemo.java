@@ -1,9 +1,9 @@
 import java.io.Console;
 
-class box {
+class box2 {
     float len, width, height;
 
-    box(float len, float wid, float hei) {
+    box2(float len, float wid, float hei) {
         this.len = len;
         this.height = hei;
         this.width = wid;
@@ -27,7 +27,7 @@ public class boxdemo {
         System.out.println("the " + no + " converted to  " + num);
         System.out.println("performing multiplictaio: " + num * 2);
 
-        box b1 = new box(num, num / 2, num * 2);
+        box2 b1 = new box2(num, num / 2, num * 2);
         System.out.println("the vol of box is: " + b1.volume());
     }
 }
