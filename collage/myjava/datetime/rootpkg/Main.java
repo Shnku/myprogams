@@ -1,6 +1,6 @@
 package datetime.rootpkg;
 
-import datetime.rootpkg.Mytime;;
+import datetime.rootpkg.Mytime;
 
 public class Main {
     public static void main(String[] args) {

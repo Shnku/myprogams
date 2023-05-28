@@ -26,4 +26,11 @@ public class Mytime {
         this.min = 0;
         this.sec = 0;
     }
+
+    // public Mytime(int m, int s) { //error.....
+    // this.hour = 0;
+    // this.min = m;
+    // this.sec = s;
+    // }
+
 }
