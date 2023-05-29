@@ -46,7 +46,6 @@ public class Mytime {
 
     public void showTime(String s) {
         System.out.println(s + "" + ":= " + hour + ":" + min + ":" + sec);
-
     }
 
 }
