@@ -23,14 +23,30 @@ public class Mytime {
 
     public Mytime(int h) {
         this.hour = h;
-        this.min = 0;
-        this.sec = 0;
+        this.min = this.sec = 0;
     }
 
-    // public Mytime(int m, int s) { //error.....
-    // this.hour = 0;
-    // this.min = m;
-    // this.sec = s;
-    // }
+    public Mytime() {
+        this.hour = this.min = this.sec = 0;
+    }
+
+    public Mytime addtMytime(Mytime t) {
+        Mytime ret = new Mytime();
+
+        ret.sec = this.sec + t.sec;
+        ret.min = ret.sec / 60;
+        ret.sec = ret.sec % 60;
+        ret.min += this.min + t.min;
+        ret.hour = ret.min / 60;
+        ret.min = ret.min % 60;
+        ret.hour += this.hour + t.hour;
+
+        return ret;
+    }
+
+    public void showTime(String s) {
+        System.out.println(s + "" + ":= " + hour + ":" + min + ":" + sec);
+
+    }
 
 }
