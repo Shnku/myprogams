@@ -28,5 +28,7 @@ public class Main {
         result = time1.addtMytime(time2);
         result.showTime("resultant time");
 
+        // close scanner...
+        sc.close(); // try catch..resource leak warning gone...
     }
 }
