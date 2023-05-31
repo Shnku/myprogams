@@ -39,11 +39,7 @@ public class AllNumberChakr {
             sum += rem;
             temp /= 10;
         }
-        if (no == sum) {
-            return true;
-        } else {
-            return false;
-        }
+        return (no == sum); // replace if else
     }
 
     public static void main(String[] args) {
