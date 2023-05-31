@@ -5,17 +5,11 @@ import java.io.IOException;
 //     public static void main(String[] args) throws IOException {
 //         DataInputStream get = new DataInputStream(System.in);
 //         System.out.println("enter a integer: ");
-//         // String s = String.valueOf(get.readLine());
-//         // The method readLine() from the type DataInputStream is deprecated
-//         // int a = (get.readInt());
-//         // System.out.println("te string is: " + a);
-//         // But Output: javac input.java && java input
-//         // enter a integer:
-//         // 56
-//         // te string is: 892733962
 
-//         int no = get.readInt();
-//         System.out.println("you enterd: " + no);
+//         //String s = String.valueOf(get.readLine());
+//         String s = get.readLine(); 
+//        
+//         System.out.println("you enterd: " + s);
 //     }
 // }
 
