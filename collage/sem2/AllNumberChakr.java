@@ -57,6 +57,7 @@ public class AllNumberChakr {
 
 /**
  ** output
+ 
  * enter the number:
  * 6
  * is it krishnamurty no? false
