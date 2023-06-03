@@ -63,18 +63,20 @@ public class BankAccoutMain {
         BankAccount myAccount = new BankAccount();
         System.out.println("what do you want to..");
         Scanner sc = new Scanner(System.in);
-        String input = sc.next();
-        char choice = input.charAt(0);
-
+        // while (sc.hasNextInt()) {
+        int choice = sc.nextInt();
         switch (choice) {
-            case 'a':
+            case 1:
                 myAccount.InitiateBankAccout();
+                break;
+            case 2:
+                myAccount.DisplayAC_details();
                 break;
 
             default:
                 break;
         }
-
-        myAccount.DisplayAC_details();
+        // }
+        sc.close();
     }
 }
