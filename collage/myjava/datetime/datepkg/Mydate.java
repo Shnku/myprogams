@@ -17,12 +17,17 @@ public class Mydate {
         this.year = y;
     }
 
-    public Mydate dayDifference(Mydate date) {
+    public Mydate dayDifference(Mydate date) { // this is wrong...
         Mydate res = new Mydate();
         res.day = this.day - date.day;
         res.month = this.month - date.month;
         res.year = this.year - date.year;
         return res;
+        /*
+         * date1 := 4/2/2023
+         * date2 := 5/8/2023
+         * resultant date:= -1/-6/0
+         */
     }
 
     public void showDate(String s) {
