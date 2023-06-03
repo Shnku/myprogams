@@ -1,4 +1,4 @@
-package datetime.rootpkg;
+package datetime.timepkg;
 
 /**
  * Mytime class...
@@ -16,14 +16,11 @@ public class Mytime {
     }
 
     public Mytime(int h, int m) {
-        this.hour = h;
-        this.min = m;
-        this.sec = 0;
+        this(h, m, 0);
     }
 
     public Mytime(int h) {
-        this.hour = h;
-        this.min = this.sec = 0;
+        this(h, 0);
     }
 
     public Mytime() {

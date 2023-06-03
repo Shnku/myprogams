@@ -1,4 +1,4 @@
-package datetime.rootpkg;
+package datetime.timepkg;
 
 import java.util.Scanner;
 
