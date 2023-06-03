@@ -10,14 +10,13 @@ public class Main {
         int h, m, s;
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Put the 1st time : ");
+        System.out.print("Put the 1st time : ");
         h = sc.nextInt();
         m = sc.nextInt();
         s = sc.nextInt();
-
         Mytime time1 = new Mytime(h, m, s);
 
-        System.out.println("Put the 2nd time : ");
+        System.out.print("Put the 2nd time : ");
         h = sc.nextInt();
         m = sc.nextInt();
         s = sc.nextInt();
@@ -26,6 +25,8 @@ public class Main {
         Mytime result = new Mytime();
 
         result = time1.addtMytime(time2);
+        time1.showTime("time1 ");
+        time2.showTime("time2 ");
         result.showTime("resultant time");
 
         // close scanner...
