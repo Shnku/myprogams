@@ -10,19 +10,33 @@ class BankAccount {
 
     void accountnogenerator() {
         Random random = new Random();
-        AccountNo = String.valueOf(random.nextInt());
+        AccountNo = String.valueOf(Math.abs(random.nextInt()));
+        // int randomNumber = random.nextInt(Integer.MAX_VALUE);
+        // way to get positive random number...
     }
 
     void InitiateBankAccout() {
-        System.out.println("__Welcome to Account creation__");
-        System.out.print("which type of AC you wanna create: ");
+        System.out.println("__Welcome to Account creation__\n");
+        System.out.print("which type of AC you wanna create: \n");
+        System.out.print("(1) Savings\n(2) Current\n en choice? ");
         Scanner sc = new Scanner(System.in);
-        AccountType = sc.nextLine();
+
+        while (sc.hasNextShort()) {
+            short key = sc.nextShort();
+            if (key > 2) {
+                System.out.println("en proper choice");
+            } else {
+                AccountType = key == 1 ? "Savings" : "Current";
+                break;
+            }
+        }
+        sc.nextLine();// cleans previous buffer..
         System.out.println("Enter your name: ");
         NameOfDepositor = sc.nextLine();
-        sc.close();
         accountnogenerator();
         Balance = 0.0;
+
+        sc.close();// free scanner..
     }
 
     boolean Diposite(double money) {
@@ -47,7 +61,20 @@ class BankAccount {
 public class BankAccoutMain {
     public static void main(String[] cmd_line_args) {
         BankAccount myAccount = new BankAccount();
-        myAccount.InitiateBankAccout();
+        System.out.println("what do you want to..");
+        Scanner sc = new Scanner(System.in);
+        String input = sc.next();
+        char choice = input.charAt(0);
+
+        switch (choice) {
+            case 'a':
+                myAccount.InitiateBankAccout();
+                break;
+
+            default:
+                break;
+        }
+
         myAccount.DisplayAC_details();
     }
 }
