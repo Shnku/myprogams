@@ -20,25 +20,13 @@ class BankAccount {
     void InitiateBankAccout() {
         System.out.println("which type of AC you wanna create:--");
         System.out.print("(1) Savings\n(2) Current\n en choice? ");
-        // Scanner sc = new Scanner(System.in);
         Console input = System.console();
-        // while (sc.hasNextInt()) {
-        // int key = sc.nextInt();
-        // if (key > 2) {
-        // System.out.println("en proper choice");
-        // } else {
-        // AccountType = key == 1 ? "Savings" : "Current";
-        // break;
-        // }
-        // }
         int key = Integer.parseInt(input.readLine());
         AccountType = key == 1 ? "Savings" : "Current";
-        // sc.nextLine();// cleans previous buffer..
         System.out.print("Enter your name: ");
         NameOfDepositor = input.readLine();
         accountnogenerator();
         Balance = 0.0;
-        // sc.close();// free scanner..
     }
 
     void Diposite() {
@@ -126,4 +114,31 @@ public class BankAccoutMain {
  * at BankAccount.InitiateBankAccout(BankAccoutMain.java:34)
  * at BankAccount.Choose_option(BankAccoutMain.java:79)
  * at BankAccoutMain.main(BankAccoutMain.java:105)
+ */
+
+/*
+ * 
+ * void InitiateBankAccout() {
+ * System.out.println("which type of AC you wanna create:--");
+ * System.out.print("(1) Savings\n(2) Current\n en choice? ");
+ * // Scanner sc = new Scanner(System.in);
+ * Console input = System.console();
+ * // while (sc.hasNextInt()) {
+ * // int key = sc.nextInt();
+ * // if (key > 2) {
+ * // System.out.println("en proper choice");
+ * // } else {
+ * // AccountType = key == 1 ? "Savings" : "Current";
+ * // break;
+ * // }
+ * // }
+ * int key = Integer.parseInt(input.readLine());
+ * AccountType = key == 1 ? "Savings" : "Current";
+ * // sc.nextLine();// cleans previous buffer..
+ * System.out.print("Enter your name: ");
+ * NameOfDepositor = input.readLine();
+ * accountnogenerator();
+ * Balance = 0.0;
+ * // sc.close();// free scanner..
+ * }
  */
