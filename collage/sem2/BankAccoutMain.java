@@ -20,9 +20,8 @@ class BankAccount {
         System.out.print("which type of AC you wanna create: \n");
         System.out.print("(1) Savings\n(2) Current\n en choice? ");
         Scanner sc = new Scanner(System.in);
-
-        while (sc.hasNextShort()) {
-            short key = sc.nextShort();
+        while (sc.hasNextInt()) {
+            int key = sc.nextInt();
             if (key > 2) {
                 System.out.println("en proper choice");
             } else {
@@ -35,7 +34,6 @@ class BankAccount {
         NameOfDepositor = sc.nextLine();
         accountnogenerator();
         Balance = 0.0;
-
         sc.close();// free scanner..
     }
 
@@ -63,20 +61,27 @@ public class BankAccoutMain {
         BankAccount myAccount = new BankAccount();
         System.out.println("what do you want to..");
         Scanner sc = new Scanner(System.in);
-        // while (sc.hasNextInt()) {
-        int choice = sc.nextInt();
-        switch (choice) {
-            case 1:
-                myAccount.InitiateBankAccout();
-                break;
-            case 2:
-                myAccount.DisplayAC_details();
-                break;
-
-            default:
-                break;
+        int flag = 1;
+        while (flag == 1) {
+            int choice = 0;
+            choice = sc.nextInt();
+            switch (choice) {
+                case 1:
+                    myAccount.InitiateBankAccout();
+                    System.out.println("account created");
+                    break;
+                case 2:
+                    myAccount.DisplayAC_details();
+                    break;
+                case 3:
+                    flag = 3;
+                    System.out.println("quit");
+                    break;
+                default:
+                    System.out.println("enter proper choice");
+                    break;
+            }
         }
-        // }
         sc.close();
     }
 }
