@@ -23,13 +23,19 @@ class BankAccount {
             scanner.next(); // Consume the invalid input
         }
         int key = scanner.nextInt();
+        while (key >= 3) {
+            System.out.println("Enter (1) or (2)....");
+            if (!scanner.hasNextInt())
+                scanner.next(); // consumes..
+            System.out.println("Enter (1) or (2)....");
+            key = scanner.nextInt(); // again input..
+            if (key < 3)
+                break; // putting under if else !init actype..
+        }
         if (key == 1) {
             AccountType = "Savings";
         } else if (key == 2) {
             AccountType = "Current";
-        } else {
-            System.out.println("Enter a valid choice");
-            return;
         }
         scanner.nextLine(); // Consume the newline character
         System.out.print("Enter your name: ");
@@ -86,7 +92,7 @@ class BankAccount {
             }
             System.out.print("Enter your choice: ");
             while (!scanner.hasNextInt()) {
-                System.out.println("Enter a valid choice");
+                System.out.println("Enter valid choice (1/2/3/4/5)");
                 scanner.next(); // Consume the invalid input
             }
             choice = scanner.nextInt();
@@ -113,8 +119,9 @@ class BankAccount {
             }
             System.out.println();
         }
-        scanner.close();
+        scanner.close();// put it here..
     }
+    // scanner.close(); // this is a statement inside class..
 }
 
 class mainBankAccountFixed {
@@ -123,3 +130,68 @@ class mainBankAccountFixed {
         bankAccount.chooseOption();
     }
 }
+
+// output...
+/*
+ * What do you want to do?
+ * (1) CreateAC
+ * (2) AC_Details
+ * (3) Withdraw
+ * (4) Deposit
+ * (5) Quit
+ * Enter your choice: 7
+ * Enter a valid choice
+ * 
+ * What do you want to do?
+ * (1) CreateAC
+ * (2) AC_Details
+ * (3) Withdraw
+ * (4) Deposit
+ * (5) Quit
+ * Enter your choice: k
+ * Enter valid choice (1/2/3/4/5)
+ * 1
+ * Which type of AC do you want to create?
+ * (1) Savings
+ * (2) Current
+ * Enter your choice: 4
+ * Enter (1) or (2)....
+ * e
+ * Enter (1) or (2)....
+ * 1
+ * Enter your name: sbag
+ * Account created
+ * 
+ * What do you want to do?
+ * (1) CreateAC
+ * (2) AC_Details
+ * (3) Withdraw
+ * (4) Deposit
+ * (5) Quit
+ * Enter your choice: 4
+ * Enter the amount to deposit: 4000
+ * Deposit successful
+ * 
+ * What do you want to do?
+ * (1) CreateAC
+ * (2) AC_Details
+ * (3) Withdraw
+ * (4) Deposit
+ * (5) Quit
+ * Enter your choice: 2
+ * -----------------------------------
+ * | AccountNo: 186880293 |
+ * | Name: sbag |
+ * | AC Type: Savings |
+ * -----------------------------------
+ * Current Balance is: 4000.0
+ * 
+ * What do you want to do?
+ * (1) CreateAC
+ * (2) AC_Details
+ * (3) Withdraw
+ * (4) Deposit
+ * (5) Quit
+ * Enter your choice: 5
+ * Exit
+ */
