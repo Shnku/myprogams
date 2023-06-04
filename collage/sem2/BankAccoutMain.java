@@ -7,6 +7,7 @@ class BankAccount {
     String AccountNo;
     String AccountType;
     Double Balance;
+    String[] options = { "CreateAC", "AC_Details", "Withdraw", "Diposite", "quit" };
 
     void accountnogenerator() {
         Random random = new Random();
@@ -54,34 +55,47 @@ class BankAccount {
         sout.printf("Name: %-25s | \n| AC Type: %-22s |\n", NameOfDepositor, AccountType);
         sout.println("-----------------------------------\nCurrent Balance is: " + Balance);
     }
-}
 
-public class BankAccoutMain {
-    public static void main(String[] cmd_line_args) {
-        BankAccount myAccount = new BankAccount();
+    int Choose_option(int choice) {
         System.out.println("what do you want to..");
+        for (String s : options) {
+            System.out.println(s);
+        }
+        System.out.println("en choice: ");
         Scanner sc = new Scanner(System.in);
-        int flag = 1;
-        while (flag == 1) {
-            int choice = 0;
-            choice = sc.nextInt();
+
+        while (options.equals("quit")) {
             switch (choice) {
                 case 1:
-                    myAccount.InitiateBankAccout();
+                    InitiateBankAccout();
                     System.out.println("account created");
                     break;
                 case 2:
-                    myAccount.DisplayAC_details();
+                    DisplayAC_details();
                     break;
                 case 3:
-                    flag = 3;
-                    System.out.println("quit");
+                    double money = sc.nextDouble();
+                    Withdraw(money);
                     break;
+                case 4:
+                    double mony = sc.nextDouble();
+                    Diposite(mony);
+                    break;
+                case 5:
+
                 default:
                     System.out.println("enter proper choice");
                     break;
             }
         }
         sc.close();
+        return choice;
+    }
+}
+
+public class BankAccoutMain {
+    public static void main(String[] cmd_line_args) {
+        BankAccount myAccount = new BankAccount();
+
     }
 }
