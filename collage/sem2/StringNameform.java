@@ -14,8 +14,8 @@ public class StringNameform {
         return result.toString();
     }
 
-    static void method() {
-
+    static void method_as_char(String s) {
+        char[] arr = s.toCharArray();
     }
 
     public static void main(String[] args) {

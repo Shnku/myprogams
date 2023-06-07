@@ -33,8 +33,6 @@ class input {
  * 1 warning
  */
 
-// ! readLine() method from the DataInputStream class is deprecated.
-
 /**
  * input
  */
