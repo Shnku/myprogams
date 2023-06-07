@@ -25,9 +25,10 @@ class BankAccount {
         int key = scanner.nextInt();
         while (key >= 3) {
             System.out.println("Enter (1) or (2)....");
-            if (!scanner.hasNextInt())
+            if (!scanner.hasNextInt()) {
                 scanner.next(); // consumes..
-            System.out.println("Enter (1) or (2)....");
+                System.out.println("Enter (1) or (2)....");
+            }
             key = scanner.nextInt(); // again input..
             if (key < 3)
                 break; // putting under if else !init actype..
