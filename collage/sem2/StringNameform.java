@@ -16,9 +16,12 @@ public class StringNameform {
 
     static void method_as_char(String s) {
         char[] arr = s.toCharArray();
+        char newarr[];
+        int newindex = 0;
         for (int i = arr.length - 1; arr[i] != ' '; i--) {
-
+            newarr[newindex++] = arr[i];
         }
+        newarr[newindex] = '\0';
     }
 
     public static void main(String[] args) {
