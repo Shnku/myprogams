@@ -16,6 +16,9 @@ public class StringNameform {
 
     static void method_as_char(String s) {
         char[] arr = s.toCharArray();
+        for (int i = arr.length - 1; arr[i] != ' '; i--) {
+
+        }
     }
 
     public static void main(String[] args) {
