@@ -1,6 +1,6 @@
 /*Take a full name as input and print the intitials . 
 If Input is “Mohandas Karamchand Gandhi” 
-output – “M.K.Gandhi” */
+output – “M.K.G” */
 
 public class StringNameform {
 
@@ -29,20 +29,28 @@ public class StringNameform {
 
     static void shortNameMaker(String s) {
         char[] copy = s.toCharArray();
-        char[] newarr = new char[s.length()];
+        char[] newarr = new char[s.length() - 5];
         int index = 0;
         newarr[index++] = copy[0];
-        for (int i = 1; i < copy.length; i++, index++) {
+        for (int i = 1; i < copy.length; i++) {
             if (copy[i] == ' ') {
-                newarr[index] = '.';
-                newarr[index + 1] = copy[i + 1];
+                System.out.println(index);
+                newarr[index++] = '.';
+                System.out.println(index);
+                newarr[index++] = copy[i + 1];
                 System.out.println(index);
             }
         }
+        // newarr[index] = '\0'; // null autometically assigned..
         System.out.println(newarr);
-        for (char c : newarr) {
+        for (char c : newarr) { // goes until length..
             System.out.println(c);
         }
+        System.out.println("end......");
+        for (int i = 0; newarr[i] != '\0'; i++) {
+            System.out.println(newarr[i]);
+        }
+        System.out.println("end");
     }
 
     public static void main(String[] args) {
@@ -57,3 +65,31 @@ public class StringNameform {
         shortNameMaker(s3);
     }
 }
+
+/*
+ * string
+ * string
+ * 1 ->s
+ * 2 ->.
+ * 3 ->b
+ * 3 ->.
+ * 4 ->k
+ * 5 ->\0
+ * s.b.k
+ * s
+ * .
+ * b
+ * .
+ * k
+ * 
+ * 
+ * 
+ * 
+ * end......
+ * s
+ * .
+ * b
+ * .
+ * k
+ * end
+ */
