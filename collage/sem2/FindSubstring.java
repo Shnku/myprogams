@@ -6,8 +6,18 @@ append s2 at the end of s1 and display s1. */
 public class FindSubstring {
 
     public static boolean isPresent(String word, String sentense) {
-        if (sentense.substring(0) == word) {
-            return true;
+        int arr[] = new int[10];
+        int index = 0;
+        for (int i = 0; i < sentense.length(); i++) {
+            if (sentense.charAt(i) == ' ')
+                arr[index++] = i;
+        }
+        for (int i = 0, j = 0; i < sentense.length(); i++) {
+            if (i == arr[j++]) {
+                if (sentense.substring(0, arr[j]) == word) {
+                    return true;
+                }
+            }
         }
         return false;
     }
