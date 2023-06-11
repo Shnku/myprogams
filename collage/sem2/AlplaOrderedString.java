@@ -21,3 +21,5 @@ public class AlplaOrderedString {
         alphaOrder(str);
     }
 }
+
+// wrong output giving....

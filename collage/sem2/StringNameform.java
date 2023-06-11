@@ -53,6 +53,28 @@ public class StringNameform {
         System.out.println("end");
     }
 
+    public static String shortNameMaker_withTitle(String s) {
+        char[] str_arr = s.toCharArray();
+        char[] new_name = new char[s.length()];
+        int index = 0, lst_space = 0;
+        for (int i = 0; i < str_arr.length; i++) {
+            if (str_arr[i] == ' ') {
+                lst_space = i;
+            }
+        }
+        new_name[index++] = str_arr[0];
+        for (int i = 1; i < str_arr.length; i++) {
+            if (i >= lst_space) {
+                new_name[index++] = str_arr[i];
+            } else if (str_arr[i] == ' ') {
+                new_name[index++] = '.';
+                new_name[index++] = str_arr[i + 1];
+            }
+        }
+        return new String(new_name);
+    }
+
+    /* this is the main method,......... */
     public static void main(String[] args) {
         String str = new String("this is a string");
         str = method(str);
@@ -63,6 +85,9 @@ public class StringNameform {
 
         String s3 = "shabku bagt ka";
         shortNameMaker(s3);
+
+        String shor = shortNameMaker_withTitle("Mohandas Karamchand Gandhi");
+        System.out.println("short with titl: " + shor);
     }
 }
 
@@ -92,4 +117,5 @@ public class StringNameform {
  * .
  * k
  * end
+ * short with titl: M.K Gandhi
  */
