@@ -48,11 +48,11 @@ public class FindSubstring {
 
     public static void main(String[] args) {
         String s = "This is the Sentense to match";
-        String w1 = "This";
-        String w2 = "is";
-        String w3 = "the";
-        String w4 = "sentense";
-        String w5 = "to";
+        // String w1 = "This";
+        // String w2 = "is";
+        // String w3 = "the";
+        // String w4 = "sentense";
+        // String w5 = "to";
         String w6 = "match";
 
         System.out.println(isPresent(w6, s));
