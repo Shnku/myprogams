@@ -57,9 +57,10 @@ public class StringNameform {
         char[] str_arr = s.toCharArray();
         char[] new_name = new char[s.length()];
         int index = 0, lst_space = 0;
-        for (int i = 0; i < str_arr.length; i++) {
+        for (int i = str_arr.length - 1; i >= 0; i--) {
             if (str_arr[i] == ' ') {
                 lst_space = i;
+                break;
             }
         }
         new_name[index++] = str_arr[0];
