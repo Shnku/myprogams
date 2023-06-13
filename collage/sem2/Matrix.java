@@ -4,7 +4,6 @@ Two matrix objects should be added , subtracted and multiplied .
 Class Matrix should have input() , display () , addition ,
 subtraction and multiplication methods . */
 
-import java.io.Console;
 import java.util.Scanner;
 
 public class Matrix {
@@ -103,9 +102,9 @@ public class Matrix {
         System.out.println();
     }
 
-    /*
+    /***********************************
      * this is the main mewthod...
-     */
+     ************************************/
     public static void main(String[] args) {
         Matrix matrix1 = new Matrix(3, 2);
         matrix1.getElements("matrix1");
