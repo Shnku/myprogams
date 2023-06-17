@@ -130,7 +130,9 @@ public class Matrix {
                 // break;
             case 3:
                 matrix3 = matrix1.multiplication(matrix2);
-                matrix3.display("matrix3 multiplication");
+                if (matrix3 != null) {
+                    matrix3.display("matrix3 multiplication");
+                }
                 // break;
             case 4:
                 matrix3 = matrix1.transporseMatrix();
