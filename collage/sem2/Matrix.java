@@ -109,7 +109,7 @@ public class Matrix {
         Matrix matrix1 = new Matrix(3, 2);
         matrix1.getElements("matrix1");
 
-        int arr[][] = { { 1, 2 }, { 6, 5 }, { 4, 2 } };
+        int arr[][] = { { 1, 2, 6, }, { 5, 4, 2 } };
         Matrix matrix2 = new Matrix(arr);
         Matrix matrix3;
 
@@ -122,11 +122,15 @@ public class Matrix {
         switch (option) {
             case 1:
                 matrix3 = matrix1.addition(matrix2);
-                matrix3.display("matrix3 addition");
+                if (matrix3 != null) {
+                    matrix3.display("matrix3 addition");
+                }
                 // break;
             case 2:
                 matrix3 = matrix1.substraction(matrix2);
-                matrix3.display("matrix3 substraction");
+                if (matrix3 != null) {
+                    matrix3.display("matrix3 substraction");
+                }
                 // break;
             case 3:
                 matrix3 = matrix1.multiplication(matrix2);
@@ -150,41 +154,37 @@ public class Matrix {
 
 // output is...
 /*
+ * javac Matrix.java && java Matrix
  * enter details for matrix1
  * 1
- * 4
- * 5
  * 2
  * 3
+ * 5
+ * 4
  * 6
  * Matrix matrix1.....
- * 1 4
- * 5 2
- * 3 6
+ * 1 2
+ * 3 5
+ * 4 6
  * 
  * Matrix matrix2.....
- * 1 2
- * 6 5
- * 4 2
+ * 1 2 6
+ * 5 4 2
  * 
  * what you eanna do? en choice:
  * 1
- * Matrix matrix3 addition.....
- * 2 6
- * 11 7
- * 7 8
+ * addition not possible..
+ * substraction isn't possible..
+ * Matrix matrix3 multiplication.....
+ * 11 10 10
+ * 28 26 28
+ * 34 32 36
  * 
- * Matrix matrix3 substraction.....
- * 0 2
- * -1 -3
- * -1 4
- * 
- * multiplication isn't possible..
  * Matrix matrix3 transporse.....
- * 1 5 3
- * 4 2 6
+ * 1 3 4
+ * 2 5 6
  * 
  * Matrix matrix3.....
- * 1 5 3
- * 4 2 6
+ * 1 3 4
+ * 2 5 6
  */
