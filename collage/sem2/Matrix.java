@@ -147,3 +147,44 @@ public class Matrix {
         io.close();
     }
 }
+
+// output is...
+/*
+ * enter details for matrix1
+ * 1
+ * 4
+ * 5
+ * 2
+ * 3
+ * 6
+ * Matrix matrix1.....
+ * 1 4
+ * 5 2
+ * 3 6
+ * 
+ * Matrix matrix2.....
+ * 1 2
+ * 6 5
+ * 4 2
+ * 
+ * what you eanna do? en choice:
+ * 1
+ * Matrix matrix3 addition.....
+ * 2 6
+ * 11 7
+ * 7 8
+ * 
+ * Matrix matrix3 substraction.....
+ * 0 2
+ * -1 -3
+ * -1 4
+ * 
+ * multiplication isn't possible..
+ * Matrix matrix3 transporse.....
+ * 1 5 3
+ * 4 2 6
+ * 
+ * Matrix matrix3.....
+ * 1 5 3
+ * 4 2 6
+ */
