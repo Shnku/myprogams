@@ -113,6 +113,8 @@ public class Matrix {
         Matrix matrix2 = new Matrix(arr);
         Matrix matrix3;
 
+        matrix1.display("matrix1");
+        matrix2.display("matrix2");
         int option;
         System.out.println("what you eanna do? en choice: ");
         Scanner io = new Scanner(System.in);
@@ -120,23 +122,27 @@ public class Matrix {
         switch (option) {
             case 1:
                 matrix3 = matrix1.addition(matrix2);
-                break;
+                matrix3.display("matrix3 addition");
+                // break;
             case 2:
                 matrix3 = matrix1.substraction(matrix2);
-                break;
+                matrix3.display("matrix3 substraction");
+
+                // break;
             case 3:
-                matrix2 = matrix2.transporseMatrix();
                 matrix3 = matrix1.multiplication(matrix2);
-                break;
+                matrix3.display("matrix3 multiplication");
+
+                // break;
             case 4:
                 matrix3 = matrix1.transporseMatrix();
+                matrix3.display("matrix3 transporse");
+
                 break;
             default:
                 matrix3 = null;
                 break;
         }
-        matrix1.display("matrix1");
-        matrix2.display("matrix2");
         matrix3.display("matrix3");
 
         io.close();
