@@ -7,9 +7,9 @@ public class AlplaOrderedString {
         for (int i = 0; i < string.length() - 1; i++) {
             for (int j = 0; j < string.length() - i - 1; j++) {
                 if (string.charAt(j) > string.charAt(j + 1)) {
-                    char temp = str_arr[i];
-                    str_arr[i] = str_arr[j];
-                    str_arr[j] = temp;
+                    char temp = str_arr[j];
+                    str_arr[j] = str_arr[j + 1];
+                    str_arr[j + 1] = temp;
                 }
             }
         }
@@ -23,3 +23,5 @@ public class AlplaOrderedString {
 }
 
 // wrong output giving....
+// deredString
+// SRTIGN
