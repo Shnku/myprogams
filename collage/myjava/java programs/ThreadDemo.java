@@ -10,16 +10,16 @@ public class ThreadDemo implements Runnable {
 
     @Override
     public void run() {
-        System.out.println(n + " Thread running.... start.");
+        System.out.println(n + " Thread start." + t);
         for (int i = 0; i < 5; i++) {
             System.out.println(" " + (i + 1) + "th ...");
         }
-        System.out.println("exiting thread..");
+        System.out.println("exiting thread.." + n + t);
     }
 
     public static void main(String[] args) {
         ThreadDemo d1 = new ThreadDemo("main");
-        ThreadDemo d2 = new ThreadDemo("chield");
+        ThreadDemo d2 = new ThreadDemo("child");
         d1.run();
         d2.run();
     }
