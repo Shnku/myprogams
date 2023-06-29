@@ -115,6 +115,7 @@ public class Matrix {
 
         matrix1.display("matrix1");
         matrix2.display("matrix2");
+        
         int option;
         System.out.println("what you eanna do? en choice: ");
         Scanner io = new Scanner(System.in);
