@@ -68,7 +68,7 @@ public class FindSubstring {
  * _This_
  * _was_
  * _the_
- * _Sentense_ //todo it will break where it founds...
+ * _Sentense_ //?now it will break where it founds...
  * 
  * /STRING matched/ Sentense:
  */
