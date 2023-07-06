@@ -9,17 +9,18 @@ public class IffitInType {
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the input number: ");
         int n = sc.nextInt();
-        boolean canbeparsed = false;
         String s[] = new String[n];
         for (int i = 0; i < n; i++) {
             System.out.println("en data " + (i + 1) + ": ");
             s[i] = sc.next();
         }
         for (int i = 0; i < s.length; i++) {
+            boolean canbeparsed = false;
             try {
                 double dd = Double.parseDouble(s[i]);
                 System.out.println("\n" + s[i] + " can be fitted in");
                 System.out.println("*double");
+                canbeparsed = true;
 
                 long l = Long.parseLong(s[i]);
                 System.out.println("*long");
