@@ -45,6 +45,7 @@ public class IffitInType {
             try {
                 long l = Long.parseLong(s[i]);
                 str[indx++] = "*long";
+                canbeparsed = true;
 
             } catch (Exception e) {
                 // TODO: handle exception
