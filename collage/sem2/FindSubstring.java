@@ -27,6 +27,7 @@ public class FindSubstring {
 
     public static void stringAppender(String str, String word) {
         if (!isPresent(str, word)) {
+            System.out.println("\nNOT MATCHED: ");
             str = str.concat(" ");
             str = str.concat(word);
         }
@@ -45,11 +46,11 @@ public class FindSubstring {
         System.out.println(isPresent(s, w6) + "\n");
 
         // System.out.println(s);
-        // String myword = "new";
         String myword = "sentense";
-        if (!isPresent(s, myword)) {
-            stringAppender(s, myword);
-        }
+        stringAppender(s, myword);
+        myword = "new";
+        stringAppender(s, myword);
+
     }
 }
 
@@ -64,11 +65,19 @@ public class FindSubstring {
  * 
  * /STRING matched/ match: true
  * 
- * This was the Sentense to match
  * _This_
  * _was_
  * _the_
- * _Sentense_ //?now it will break where it founds...
+ * _Sentense_ //?IT WILL BREAK WHERE MATCH FOUND..
  * 
- * /STRING matched/ Sentense:
+ * /STRING matched/ Sentense: This was the Sentense to match
+ * _This_
+ * _was_
+ * _the_
+ * _Sentense_
+ * _to_
+ * _match_
+ * 
+ * NOT MATCHED:
+ * This was the Sentense to match new
  */
