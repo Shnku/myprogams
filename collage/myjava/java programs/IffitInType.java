@@ -16,34 +16,63 @@ public class IffitInType {
         }
         for (int i = 0; i < s.length; i++) {
             boolean canbeparsed = false;
+            String[] str = new String[6];
+            int indx = 0;
+
             try {
-                double dd = Double.parseDouble(s[i]);
-                System.out.println("\n" + s[i] + " can be fitted in");
-                System.out.println("*double");
+                byte b = Byte.parseByte(s[i]);
+                str[indx++] = "*byte";
+                canbeparsed = true;
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+            try {
+                short ss = Short.parseShort(s[i]);
+                str[indx++] = "*short";
                 canbeparsed = true;
 
-                float f = Float.parseFloat(s[i]);
-                System.out.println("*float");
-
-                long l = Long.parseLong(s[i]);
-                System.out.println("*long");
-
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+            try {
                 int d = Integer.parseInt(s[i]);
-                System.out.println("*int");
+                str[indx++] = "*int";
+                canbeparsed = true;
 
-                short ss = Short.parseShort(s[i]);
-                System.out.println("*short");
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+            try {
+                long l = Long.parseLong(s[i]);
+                str[indx++] = "*long";
 
-                byte b = Byte.parseByte(s[i]);
-                System.out.println("*byte");
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+            try {
+                float f = Float.parseFloat(s[i]);
+                str[indx++] = "*float";
+                canbeparsed = true;
 
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+            try {
+                double dd = Double.parseDouble(s[i]);
+                str[indx++] = "*double";
                 canbeparsed = true;
 
             } catch (Exception f) {
                 // System.out.println(s[i] + " can't be fitted anywhere");
             }
+
             if (!canbeparsed) {
                 System.out.println(s[i] + " can't be fitted anywhere");
+            } else {
+                System.out.println("\n" + s[i] + " can be fitted in:");
+                for (int j = 0; j < indx; j++) {
+                    System.out.println(str[j]);
+                }
             }
         }
         sc.close();
@@ -53,38 +82,49 @@ public class IffitInType {
 // output
 /*
  * enter the input number:
- * 5
+ * 1
  * en data 1:
- * -15.2656
- * en data 2:
- * -153
- * en data 3:
- * 4.32
- * en data 4:
- * 56798798798.5789798
- * en data 5:
- * 4787897897987789798787878799
+ * 56
  * 
- * -15.2656 can be fitted in
- * double
+ * 56 can be fitted in
  * float
- * 
- * -153 can be fitted in
  * double
- * float
+ * short
  * long
  * int
- * short
+ * byte
+ */
+/*
+ * enter the input number:
+ * 5
+ * en data 1:
+ * 42323
+ * en data 2:
+ * 54654654647897546
+ * en data 3:
+ * 2359689.6565659685
+ * en data 4:
+ * 2.1
+ * en data 5:
+ * 56748ghj546
  * 
- * 4.32 can be fitted in
- * double
+ * 42323 can be fitted in
  * float
+ * double
+ * long
+ * int
  * 
- * 56798798798.5789798 can be fitted in
- * double
+ * 54654654647897546 can be fitted in
  * float
+ * double
+ * long
  * 
- * 4787897897987789798787878799 can be fitted in
- * double
+ * 2359689.6565659685 can be fitted in
  * float
+ * double
+ * 
+ * 2.1 can be fitted in
+ * float
+ * double
+ * 56748ghj546 can't be fitted anywhere
  */
