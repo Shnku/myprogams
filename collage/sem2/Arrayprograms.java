@@ -24,7 +24,6 @@ public class Arrayprograms {
         System.out.println("enter the array size: ");
         size = sc.nextInt();
         array = new int[size];
-        System.out.println(array.length);
         System.out.println("enter array elements:");
         for (int i = 0; i < size; i++) {
             if (!sc.hasNextInt())
@@ -50,24 +49,30 @@ public class Arrayprograms {
         return max;
     }
 
-    // ?we can do it with binary search...
-    /***
     int[][] whichRepeated_how_menyTimes() {
         int a[][] = new int[size][2];
         int id1 = 0;
         for (int i : array) {
             a[id1][1] = 0;
-            for (int j : array) {
-                if (i == j) {
+            for (int j = 0; j < array.length; j++) {
+                if (i == array[j]) {
+                    if (a[j][1] >= 1) {
+                        a[id1][1]++;
+                        break;
+                    }
                     a[id1][0] = i;
                     a[id1][1]++;
+                    // id1++ //!wrong...
                 }
             }
             id1++;
         }
         return a;
-    }*/
+    }
 
+    // ?we can do it with binary search...
+    //!this is not working...
+    /* 
     int[][] whichRepeated_how_menyTimes() {
         int a[][] = new int[size][2];
         int indx = 0;
@@ -81,6 +86,7 @@ public class Arrayprograms {
         // return a = null;
         return a;
     }
+    */
 
     void bubbleSort() {
         for (int i = 0; i < array.length - 1; i++) {
@@ -94,14 +100,14 @@ public class Arrayprograms {
 
     boolean binarySearch(int element) {
         int mid;
-        for (int i = 0, j = array.length - 1; i < j;) {
+        for (int i = 0, j = array.length - 1; i <= j;) {
             mid = (i + j) / 2;
-            if (element == mid)
+            if (element == array[mid])
                 return true;
-            else if (element < mid)
-                j = mid;
+            else if (element < array[mid])
+                j = mid - 1;
             else
-                i = mid;
+                i = mid + 1;
         }
         return false;
     }
@@ -120,15 +126,18 @@ public class Arrayprograms {
 
         System.out.println("array input: ");
         foo.getInput();
+        System.out.println("****Displaying the array******");
+        foo.display();
+        System.out.println("\n*******************************");
         System.out.println("1:sum\n2:max\n3:howmenytimes\n4:bubble sort\n5:binary search\nenter a choice: ");
         short k = input.nextShort();
         switch (k) {
             case 1:
                 System.out.println("sum is: " + foo.sumOfElements());
-                break;
+                // break;
             case 2:
                 System.out.println("max is: " + foo.findMax());
-                break;
+                // break;
             case 3:
                 System.out.println("which element how meny times..");
                 int a[][] = foo.whichRepeated_how_menyTimes();
@@ -138,13 +147,14 @@ public class Arrayprograms {
                     }
                     System.out.println("times");
                 }
-                break;
+                // break;
             case 4:
-                System.out.println("after shorting:");
+                System.out.println("\nafter shorting:");
                 foo.bubbleSort();
                 foo.display();
+                // break;
             case 5:
-                System.out.println("en the element to search:");
+                System.out.println("\nen the element to search:");
                 int search = input.nextInt();
                 if (foo.binarySearch(search))
                     System.out.println("found");
