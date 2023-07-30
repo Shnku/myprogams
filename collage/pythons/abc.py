@@ -18,23 +18,27 @@ def fibonacci(n):
         print(k," ",end="")
 
 def fibo(n):
-    if n<=1:
-        #print(1)
+    if n==0:
+        return 0
+    elif n==1:
         return 1
     else:
         k=(fibo(n-1)+fibo(n-2))
         print(k)
         return k
-    
+
+def demo():
+    pass
 
 a=int(input("en the no: "))   
 print(a)
 x=factorial(5)
 print(f"\nfinal result is: {x} unit")
 fibonacci(5)
+b=0o1234
+print(f"\n\nb={b}")
 y=fibo(a)
 print(f'\n\nthr recursive fibo is {y}')
-    
     
 #output
 '''

@@ -15,7 +15,11 @@
 		"python.analysis.inlayHints.callArgumentNames": true,
 		"pythonIndent.keepHangingBracketOnLine": true,
 		"pythonIndent.trimLinesWithOnlyWhitespace": true,
-		"pythonIndent.useTabOnHangingIndent": true
+		"pythonIndent.useTabOnHangingIndent": true,
+		"python.analysis.typeCheckingMode": "basic",
+		"python.analysis.fixAll": [
+			
+		]
 	},
 	"extensions": {
 		"recommendations": []
