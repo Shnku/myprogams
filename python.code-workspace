@@ -7,7 +7,15 @@
 	"settings": {
 		"files.associations": {
 			"cmath": "cpp"
-		}
+		},
+		"python.analysis.autoFormatStrings": true,
+		"python.analysis.autoImportCompletions": true,
+		"python.analysis.addImport.exactMatchOnly": true,
+		"python.analysis.completeFunctionParens": true,
+		"python.analysis.inlayHints.callArgumentNames": true,
+		"pythonIndent.keepHangingBracketOnLine": true,
+		"pythonIndent.trimLinesWithOnlyWhitespace": true,
+		"pythonIndent.useTabOnHangingIndent": true
 	},
 	"extensions": {
 		"recommendations": []
