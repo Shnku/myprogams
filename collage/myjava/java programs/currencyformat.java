@@ -14,6 +14,8 @@ public class Solution {
         // Write your code here.
         String us = NumberFormat.getCurrencyInstance(Locale.US).format(payment);
         String india = NumberFormat.getCurrencyInstance(new Locale("en","IN")).format(payment);
+        //public Locale(String language,String country) 
+        /*india doesnot have any format*/
         String china=NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment);
         String france=NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment);
 
