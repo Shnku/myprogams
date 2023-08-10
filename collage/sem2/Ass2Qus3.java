@@ -23,4 +23,4 @@ public class Ass2Qus3 {
 cd "/home/shanku/Public/myprogams/collage/sem2/" 
 && javac Ass2Qus3.java && java Ass2Qus3
 showing x=10
- */
+*/
