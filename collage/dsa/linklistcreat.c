@@ -54,9 +54,10 @@ void free_list()
 int main()
 {
     printf("en the data: ");
+    add_to_list(1);
     add_to_list(5);
-    add_to_list(5);
-    add_to_list(5);
+    add_to_list(4);
+    add_to_list(3);
     display_list();
     free_list();
     return 0;
