@@ -8,26 +8,56 @@ typedef struct list
 } LIST;
 
 LIST *head_pointer = NULL;
-LIST *current_node = NULL;
 
 void add_to_list(int data)
 {
-    LIST *iterator = head_pointer;
-    LIST *node = (LIST *)malloc(sizeof(LIST));
-    node->list_data = data;
-    node->link_to_nxts_addr = NULL;
-    while (head_pointer->link_to_nxts_addr != NULL)
+    LIST *tmp_iterate = head_pointer;
+    LIST *new_node = (LIST *)malloc(sizeof(LIST));
+    (*new_node).list_data = data;
+    (*new_node).link_to_nxts_addr = NULL;
+
+    if (head_pointer == NULL)
     {
-        iterator = iterator->link_to_nxts_addr;
+        head_pointer = new_node;
+        return;
     }
-    current_node = iterator;
-    current_node->link_to_nxts_addr = node;
+
+    while ((*tmp_iterate).link_to_nxts_addr != NULL)
+    {
+        tmp_iterate = (*tmp_iterate).link_to_nxts_addr;
+    }
+    (*tmp_iterate).link_to_nxts_addr = new_node;
+}
+
+void display_list()
+{
+    LIST *temp_iterator = head_pointer;
+    while ((*temp_iterator).link_to_nxts_addr != NULL)
+    {
+        printf("\n%d ==+ ", (*temp_iterator).list_data);
+        temp_iterator = (*temp_iterator).link_to_nxts_addr;
+    }
+}
+
+void free_list()
+{
+    LIST *temp_iterator = head_pointer;
+    LIST *currently_pointed_to = NULL;
+    while (temp_iterator != NULL)
+    {
+        currently_pointed_to = temp_iterator;
+        temp_iterator = (*temp_iterator).link_to_nxts_addr;
+        free(currently_pointed_to);
+    }
 }
 
 int main()
 {
-
     printf("en the data: ");
-
+    add_to_list(5);
+    add_to_list(5);
+    add_to_list(5);
+    display_list();
+    free_list();
     return 0;
 }
