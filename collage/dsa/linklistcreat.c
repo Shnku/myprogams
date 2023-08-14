@@ -32,7 +32,7 @@ void add_to_list(int data)
 void display_list()
 {
     LIST *temp_iterator = head_pointer;
-    while ((*temp_iterator).link_to_nxts_addr != NULL)
+    while (temp_iterator != NULL)
     {
         printf("\n%d ==+ ", (*temp_iterator).list_data);
         temp_iterator = (*temp_iterator).link_to_nxts_addr;
