@@ -24,7 +24,7 @@ public class Solution {
         NumberFormat currencyFormat = NumberFormat.getCurrencyInstance(Locale.GERMANY);
         //! NumberFormat currencyFormat = NumberFormat.getInstance(Locale.GERMANY); //error...
         // Format the currency value
-        String formattedAmount = currencyFormat.format(amount);
+        String formattedAmount = currencyFormat.format(payment);
         
         System.out.println("US: " + us);
         System.out.println("India: " + india);
