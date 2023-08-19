@@ -118,6 +118,14 @@ public class Arrayprograms {
         }
     }
 
+    void display(int a[]) {
+        System.out.println("Displaying array:");
+        for (int i : a) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
     /******************************** */
     /* the main function.. */
     public static void main(String[] args) {
