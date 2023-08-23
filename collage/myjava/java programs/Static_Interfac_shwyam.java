@@ -1,6 +1,7 @@
 interface ExtraLarge {
     public String extra = "This is extra-large";
 
+    public void display();
     // default public  void display() { //!we can't do that here..
     //     System.out.println(extra);
     // }
@@ -29,6 +30,7 @@ class Small extends Medium {
 public class Static_Interfac_shwyam implements ExtraLarge {
     public void display() {
         System.out.println(extra);
+        System.out.println(this.extra);//works but warns "static way."
     }
 
     public static void main(String[] args) {
