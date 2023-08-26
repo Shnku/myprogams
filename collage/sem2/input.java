@@ -11,18 +11,21 @@ class input {
 
         System.out.println("enter a integer: ");
         int i = Integer.parseInt(get.readLine());
-        System.out.println("you enterd: " + s + " " + i);
+        int j = Integer.parseInt(get.readLine());
+        System.out.println("you enterd: " + s + " " + (i + j));
     }
 }
 
 /*
  * Note: input.java uses or overrides a deprecated API.
  * Note: Recompile with -Xlint:deprecation for details.
- * enter a sentense:
- * this
- * enter a integer:
- * 5
- * you enterd: this
+ * Note: input.java uses or overrides a deprecated API.
+enter a sentense: 
+this is a sentense
+enter a integer: 
+56
+23
+you enterd: this is a sentense 79
  */
 /*
  * javac -Xlint input.java
