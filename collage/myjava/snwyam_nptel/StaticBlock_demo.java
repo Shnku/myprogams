@@ -28,6 +28,8 @@ class Static22 extends Static1 {
 public class StaticBlock_demo {
     public static void main(String[] args) {
         System.out.println(new Static22().x); //0; //10;
+        Static1 obj = new Static1();
+        System.out.println(obj.x);
     }
 }
 
@@ -37,4 +39,6 @@ x= 10
 x= 11
 x= 10
 10
+x=11
+11
  */
