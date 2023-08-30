@@ -14,7 +14,7 @@ public:
 	void display()
 	{
 		cout << '\n'
-			 << a << (b < 0 ? "-" : "+") << b << "i";
+			 << a << (b < 0 ? "" : "+") << b << "i";
 	}
 
 	void addition(complex x, complex y)
