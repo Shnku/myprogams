@@ -22,6 +22,14 @@ public:
 		this.real = x.real + y.real;
 		this.img = x.img + y.img;
 	}
+
+ complex addition (complex c)
+ {
+  complex x;
+  x.real=this.real + c.real;
+  x.img=this.img + c.img;
+  return x;
+ }
 };
 
 int main()
