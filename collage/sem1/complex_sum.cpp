@@ -14,7 +14,7 @@ public:
 	void display()
 	{
 		cout << '\n'
-			 << real << (img < 0 ? "" : "+") << img << "i";
+		<< real << (img < 0 ? "" : "+") << img << "i";
 	}
 
 	void addition(complex x, complex y)
