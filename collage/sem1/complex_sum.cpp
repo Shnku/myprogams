@@ -3,25 +3,33 @@ using namespace std;
 
 class complex
 {
-	int a, b;
+	int real, img;
 
 public:
 	void getdeta()
 	{
 		cout << "Enter the number: ";
-		cin >> a >> b;
+		cin >> real >> img;
 	}
 	void display()
 	{
 		cout << '\n'
-			 << a << (b < 0 ? "-" : "+") << b << "i";
+		<< real << (img < 0 ? "" : "+") << img << "i";
 	}
 
 	void addition(complex x, complex y)
 	{
-		a = x.a + y.a;
-		b = x.b + y.b;
+		this.real = x.real + y.real;
+		this.img = x.img + y.img;
 	}
+
+ complex addition (complex c)
+ {
+  complex x;
+  x.real=this.real + c.real;
+  x.img=this.img + c.img;
+  return x;
+ }
 };
 
 int main()
