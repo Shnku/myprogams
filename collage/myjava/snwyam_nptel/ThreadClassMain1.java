@@ -7,6 +7,7 @@ class ThreadA extends Thread {
     }
 }
 
+// todo: when implementing Runnlable Interface..
 class ThreadB implements Runnable {
     public void run() {
         for (int i = 1; i <= 5; i++) {
@@ -17,6 +18,13 @@ class ThreadB implements Runnable {
 
     public void start() {
         run();
+    }
+}
+
+//todo:another approach...
+class ThreadB2 implements Runnable {
+    public void run() {
+        System.out.println("another approiach runnable implemenatation running..");
     }
 }
 
@@ -37,6 +45,9 @@ public class ThreadClassMain1 {
         tA.start();
         tB.start();
         tC.start();
+
+        Thread tB2 = new Thread(new ThreadB2());
+        tB2.start();
 
     }
 }
