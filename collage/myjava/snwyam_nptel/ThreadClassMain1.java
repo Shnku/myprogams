@@ -46,10 +46,13 @@ public class ThreadClassMain1 {
         tB.start(); //or tB.run() without defining start..
         tC.start();
 
-        Thread tB2 = new Thread(new ThreadB2());
-        //note: this is the other way...
+        Thread tB2 = new Thread(new ThreadB2()); //2nd way.
         tB2.start();
-
+        
+        //note: we can also do that..
+        ThreadB2 tb2_iface = new ThreadB2();
+        Thread tb2_obj = new Thread(tb2_iface);
+        tb2_obj.start();
     }
 }
 
