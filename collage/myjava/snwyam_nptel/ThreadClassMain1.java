@@ -40,13 +40,14 @@ class ThreadC extends Thread {
 public class ThreadClassMain1 {
     public static void main(String[] args) {
         ThreadA tA = new ThreadA();
-        ThreadB tB = new ThreadB();
+        ThreadB tB = new ThreadB(); //first way..
         ThreadC tC = new ThreadC();
         tA.start();
-        tB.start();
+        tB.start(); //or tB.run() without defining start..
         tC.start();
 
         Thread tB2 = new Thread(new ThreadB2());
+        //note: this is the other way...
         tB2.start();
 
     }
