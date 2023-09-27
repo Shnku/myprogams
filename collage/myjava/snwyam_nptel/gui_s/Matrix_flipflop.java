@@ -25,6 +25,6 @@ Note the following points carefully:
 
 public class Matrix_flipflop {
     public static void main(String[] args) {
-
+        
     }
 }

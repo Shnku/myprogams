@@ -23,10 +23,75 @@ public class Bac222calcuator {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String ip = sc.nextLine();
-        double no1, no2;
+
         char[] array = ip.toCharArray();
+        char operations = '0';
+        int no1, no2;
+        no1 = no2 = 0;
+        boolean key = false;
+
         for (int i = 0; i < array.length; i++) {
-            no1 = gui_map(array[i]);
+            switch (array[i]) {
+                case 'b':
+                case 'e':
+                case 'f':
+                case 'g':
+                case 'i':
+                case 'j':
+                case 'k':
+                case 'n':
+                case 'm':
+                case 'o':
+                    if (key == false) {
+                        no1 = no1 * 10 + (gui_map(array[i]) - '0');
+                        System.out.println("no1:" + no1);
+                    } else {
+                        no2 = no2 * 10 + (gui_map(array[i]) - '0');
+                        System.out.println("no2:" + no2);
+                    }
+                    break;
+
+                case 'd':
+                    operations = gui_map(array[i]);
+                    key = true;
+                    System.out.println(operations);
+                    break;
+                case 'h':
+                    operations = gui_map(array[i]);
+                    key = true;
+                    System.out.println(operations);
+                    break;
+                case 'l':
+                    operations = gui_map(array[i]);
+                    key = true;
+                    System.out.println(operations);
+                    break;
+                case 'p':
+                    operations = gui_map(array[i]);
+                    key = true;
+                    System.out.println(operations);
+                    break;
+
+                case 'c':
+                    switch (operations) {
+                        case '+':
+                            System.out.println("no1 " + operations + " no2= " + (no1 + no2));
+                            break;
+                        case '-':
+                            System.out.println("no1 " + operations + " no2= " + (no1 - no2));
+                            break;
+                        case 'X':
+                            System.out.println("no1 " + operations + " no2= " + (no1 * no2));
+                            break;
+                        case '/':
+                            System.out.println("no1 " + operations + " no2= " + (no1 / no2));
+                            break;
+                        default:
+                            break;
+                    }
+                default:
+                    break;
+            }
         }
 
         sc.close();
