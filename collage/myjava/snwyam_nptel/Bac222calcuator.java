@@ -129,3 +129,22 @@ public class Bac222calcuator {
         return out;
     }
 }
+
+//output..
+/*
+fgpic
+no1:2
+no1:23
+/
+no2:4
+no1 / no2= 5
+
+
+fglkc
+no1:2
+no1:23
+X
+no2:6
+no1 X no2= 138
+
+ */
