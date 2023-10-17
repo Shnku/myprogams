@@ -21,13 +21,12 @@ public class InteractiveApplet extends Applet {
         g.drawString("enter 2 vals: ", 10, 50);
         try {
             v1 = Integer.parseInt(input1.getText());
-            v2 = Integer.parseInt(input1.getText());
+            v2 = Integer.parseInt(input2.getText());
             ans = v1 + v2;
-            g.drawString("the sum is: ", 10, 75);
-            g.drawString(String.valueOf(ans), 100, 75);
-
         } catch (Exception e) {
-            // TODO: handle exception
+            // handle exception
         }
+        g.drawString("the sum is: ", 10, 75);
+        g.drawString(String.valueOf(ans), 100, 75);
     }
 }
