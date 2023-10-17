@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.Label;
 import java.awt.event.MouseEvent;
@@ -15,21 +16,22 @@ public class MouseLishenExample extends Frame implements MouseListener, MouseMot
         addMouseMotionListener(this);
         addMouseWheelListener(this);
 
-        l = new Label("l1");
-        l.setBounds(20, 50, 100, 30);
+        l = new Label("l1 .......................... ");
+        // l.setBounds(20, 50, 100, 30);
         l.setBackground(Color.yellow);
-        l2 = new Label("l2");
-        l2.setBounds(60, 100, 130, 30);
+        l2 = new Label("l2.......................... ");
+        // l2.setBounds(60, 100, 130, 30);
         l2.setBackground(Color.red);
-        l3 = new Label("l3");
-        l3.setBounds(100, 150, 130, 30);
+        l3 = new Label("l3................................. ");
+        // l3.setBounds(100, 150, 130, 30);
         l3.setBackground(Color.green);
 
         add(l);
         add(l2);
         add(l3);
         setSize(500, 400);
-        setLayout(null);
+        // setLayout(null);
+        setLayout(new FlowLayout(FlowLayout.CENTER, 30, 30));
         setBackground(Color.blue);
         setVisible(true);
     }
