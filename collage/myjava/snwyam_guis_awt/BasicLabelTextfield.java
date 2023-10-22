@@ -38,7 +38,7 @@ public class BasicLabelTextfield {
         f.setBackground(Color.black);
         f.setLayout(null);
         f.setVisible(true);
-
+        f.setTitle("basiclabel text field demo");
     }
-    
+
 }

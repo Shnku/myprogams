@@ -39,6 +39,7 @@ public class TextNoCount extends JFrame implements ActionListener {
         setLayout(null);
         setSize(500, 400);
         setVisible(true);
+        setTitle(getName()); //frame0
         setDefaultCloseOperation(3);
     }
 
