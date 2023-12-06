@@ -11,7 +11,13 @@ int main()
     printf("\n3) add end");
     printf("\n4) add before");
     printf("\n5) add after");
-    printf("\n6) display list");
+    printf("\n6) delete beginning");
+    printf("\n7) delete end");
+    printf("\n8) delete after");
+    printf("\n9) delete before");
+    printf("\n10) delete specified");
+    printf("\n11) delete full list");
+    printf("\n12) display list");
     printf("\n__other input will exit the program__");
 
     choice = get_input();
