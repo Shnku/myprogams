@@ -2,7 +2,7 @@
 
 int main()
 {
-    LIST *head = NULL;
+    LIST *head;
     int data, choice;
 
     printf("\n__this is a link list program__\navailavle options---\n");
