@@ -14,12 +14,12 @@ int main()
     printf("\n__this is a link list program__\navailavle options---\n");
     while (1)
     {
-        printf("\n************************************");
+        printf("\n___________________________________");
         printf("\n\t1) create list");
         printf("\n\t2) add beginning");
         printf("\n\t3) add end");
-        printf("\n\t4) add before");
-        printf("\n\t5) add after");
+        printf("\n\t4) add after");
+        printf("\n\t5) add before");
         printf("\n\t6) delete beginning");
         printf("\n\t7) delete end");
         printf("\n\t8) delete after");
@@ -29,7 +29,6 @@ int main()
         printf("\n\t12) display list");
         printf("\n__other input will exit the program__\n");
         choice = get_input("choice");
-        printf("\nchoice=%d", choice);
         switch (choice)
         {
         case 1:
@@ -55,23 +54,41 @@ int main()
             // head = add_after(head, position, data);
             break;
         case 5:
-            printf("\before which to add? ");
+            printf("\nbefore which to add? ");
             position = get_input("before");
             data = get_input("data");
             add_bef(&head, position, data);
             // head = add_before(head, position, data);
             break;
         case 6:
+            printf("\ndelete beginning..");
+            del_beg(&head);
+            // head = del_beginning(head);
             break;
         case 7:
+            printf("\ndelete end...");
+            del_end(&head);
+            // head = del_ending(head);
             break;
         case 8:
+            printf("\nafter what to delete? ");
+            position = get_input("after");
+            del_aft(&head, position);
+            // head = del_after(head, position);
             break;
         case 9:
+            printf("\nbefore what to delete");
+            position = get_input("before");
+            del_bef(&head, position);
+            // head = del_before(head, position);
             break;
         case 10:
+            data = get_input("specific data to delete ");
+            head = delete_spec(head, data);
             break;
         case 11:
+            printf("\nfreeing full list......");
+            head = delete_all(head);
             break;
         case 12:
             printf("\n___displaying the LIST______\n");

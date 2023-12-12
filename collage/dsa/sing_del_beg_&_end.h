@@ -34,12 +34,14 @@ void del_end(LIST **head)
         return;
     }
     ptr = *head;
-    while (ptr != NULL)
+    while (ptr->nxt_p != NULL)
     {
         prev = ptr;
         ptr = ptr->nxt_p;
     }
+    temp = ptr;
     prev->nxt_p = NULL;
+    free(temp);
 }
 
 LIST *del_ending(LIST *head)
@@ -51,11 +53,13 @@ LIST *del_ending(LIST *head)
         return head;
     }
     ptr = head;
-    while (ptr != NULL)
+    while (ptr->nxt_p != NULL)
     {
         prev = ptr;
         ptr = ptr->nxt_p;
     }
+    temp = ptr;
     prev->nxt_p = NULL;
+    free(temp);
     return head;
 }
