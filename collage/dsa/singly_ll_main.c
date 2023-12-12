@@ -14,18 +14,19 @@ int main()
     printf("\n__this is a link list program__\navailavle options---\n");
     while (1)
     {
-        printf("\n1) create list");
-        printf("\n2) add beginning");
-        printf("\n3) add end");
-        printf("\n4) add before");
-        printf("\n5) add after");
-        printf("\n6) delete beginning");
-        printf("\n7) delete end");
-        printf("\n8) delete after");
-        printf("\n9) delete before");
-        printf("\n10) delete specified");
-        printf("\n11) delete full list");
-        printf("\n12) display list");
+        printf("\n************************************");
+        printf("\n\t1) create list");
+        printf("\n\t2) add beginning");
+        printf("\n\t3) add end");
+        printf("\n\t4) add before");
+        printf("\n\t5) add after");
+        printf("\n\t6) delete beginning");
+        printf("\n\t7) delete end");
+        printf("\n\t8) delete after");
+        printf("\n\t9) delete before");
+        printf("\n\t10) delete specified");
+        printf("\n\t11) delete full list");
+        printf("\n\t12) display list");
         printf("\n__other input will exit the program__\n");
         choice = get_input("choice");
         printf("\nchoice=%d", choice);

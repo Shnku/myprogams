@@ -60,8 +60,12 @@ LIST *create_list2(LIST *head)
     if (no_of_elmnt == 0)
         return head;
     data = get_input("data");
-    head = add_begining(head, data);
-    for (int i = 0; i < no_of_elmnt; i++)
+    // head = add_begining(head, data);
+    temp = (LIST *)malloc(sizeof(LIST));
+    temp->data = data;
+    temp->nxt_p = NULL;
+    head = temp;
+    for (int i = 2; i <= no_of_elmnt; i++)
     {
         data = get_input("data");
         head = add_ending(head, data);
