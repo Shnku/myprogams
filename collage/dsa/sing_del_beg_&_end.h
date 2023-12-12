@@ -1,4 +1,4 @@
-#include "singly_ll_create.h"
+// #include "singly_ll_create.h"
 
 void del_beg(LIST **head)
 {
@@ -17,11 +17,12 @@ LIST *del_beginning(LIST *head)
     if (head == NULL)
     {
         printf("\nlist is empty..");
-        return;
+        return head;
     }
     LIST *ptr = head;
     head = ptr->nxt_p;
     free(ptr);
+    return head;
 }
 
 void del_end(LIST **head)
@@ -47,7 +48,7 @@ LIST *del_ending(LIST *head)
     if (head == NULL)
     {
         printf("\n list is empty");
-        return;
+        return head;
     }
     ptr = head;
     while (ptr != NULL)

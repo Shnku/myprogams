@@ -1,4 +1,4 @@
-#include "singly_ll_create.h"
+// #include "singly_ll_create.h"
 
 void del_bef(LIST **head, int before)
 {
@@ -109,4 +109,5 @@ LIST *del_after(LIST *head, int after)
         ptr = ptr->nxt_p;
     }
     printf("%d not present on list...", after);
+    return head;
 }

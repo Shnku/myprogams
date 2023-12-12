@@ -41,4 +41,5 @@ LIST *add_ending(LIST *head, int data)
     temp->data = data;
     temp->nxt_p = NULL;
     ptr->nxt_p = temp;
+    return head;
 }
