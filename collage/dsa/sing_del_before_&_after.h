@@ -43,15 +43,18 @@ LIST *del_before(LIST *head, int before)
     }
     if (head->data == before)
     {
-        printf("\nno node to delete..only node");
+        printf("\nno node before it");
         return head;
     }
-    while (ptr->nxt_p != NULL)
+    while (ptr != NULL)
     {
         if (ptr->nxt_p->data == before)
         {
             temp = ptr;
-            prev->nxt_p = ptr->nxt_p;
+            if (prev != NULL)
+                prev->nxt_p = ptr->nxt_p;
+            else
+                head = ptr->nxt_p;
             free(temp);
             return head;
         }

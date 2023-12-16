@@ -1,41 +1,34 @@
 // #include "singly_ll_create.h"
 
-void del_beg(LIST **head)
-{
-    if (*head == NULL)
-    {
+void del_beg(LIST** head) {
+    if (*head == NULL) {
         printf("\nlist is empty..");
         return;
     }
-    LIST *ptr = *head;
+    LIST* ptr = *head;
     *head = ptr->nxt_p;
     free(ptr);
 }
 
-LIST *del_beginning(LIST *head)
-{
-    if (head == NULL)
-    {
+LIST* del_beginning(LIST* head) {
+    if (head == NULL) {
         printf("\nlist is empty..");
         return head;
     }
-    LIST *ptr = head;
+    LIST* ptr = head;
     head = ptr->nxt_p;
     free(ptr);
     return head;
 }
 
-void del_end(LIST **head)
-{
+void del_end(LIST** head) {
     LIST *ptr, *temp, *prev = NULL;
-    if (*head == NULL)
-    {
+    if (*head == NULL) {
         printf("\n list is empty");
         return;
     }
     ptr = *head;
-    while (ptr->nxt_p != NULL)
-    {
+    while (ptr->nxt_p != NULL) {
         prev = ptr;
         ptr = ptr->nxt_p;
     }
@@ -44,22 +37,22 @@ void del_end(LIST **head)
     free(temp);
 }
 
-LIST *del_ending(LIST *head)
-{
+LIST* del_ending(LIST* head) {
     LIST *ptr, *temp, *prev = NULL;
-    if (head == NULL)
-    {
+    if (head == NULL) {
         printf("\n list is empty");
         return head;
     }
     ptr = head;
-    while (ptr->nxt_p != NULL)
-    {
+    while (ptr->nxt_p != NULL) {
         prev = ptr;
         ptr = ptr->nxt_p;
     }
     temp = ptr;
-    prev->nxt_p = NULL;
+    if (prev != NULL)
+        prev->nxt_p = NULL;
+    else
+        head = ptr->nxt_p;
     free(temp);
     return head;
 }
