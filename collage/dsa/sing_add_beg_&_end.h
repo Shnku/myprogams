@@ -5,7 +5,7 @@ void add_beg(LIST **head, int data)
     LIST *temp;
     temp = (LIST *)malloc(sizeof(LIST));
     temp->data = data;
-    temp->nxt_p = (*head)->nxt_p;
+    temp->nxt_p = *head;
     *head = temp;
 }
 
@@ -14,7 +14,7 @@ LIST *add_begining(LIST *head, int data)
     LIST *temp;
     temp = (LIST *)malloc(sizeof(LIST));
     temp->data = data;
-    temp->nxt_p = head->nxt_p;
+    temp->nxt_p = head;
     head = temp;
     return head;
 }
@@ -35,10 +35,16 @@ LIST *add_ending(LIST *head, int data)
 {
     LIST *temp;
     LIST *ptr = head;
+    if (head == NULL)
+    {
+        head = add_begining(head, data);
+        return head;
+    }
     while (ptr->nxt_p != NULL)
         ptr = ptr->nxt_p;
     temp = (LIST *)malloc(sizeof(LIST));
     temp->data = data;
     temp->nxt_p = NULL;
     ptr->nxt_p = temp;
+    return head;
 }
