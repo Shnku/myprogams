@@ -30,8 +30,8 @@ def orangecap(d):
     l=[]
     for i in d: # it returns strings.. so we cant access it like this
         print(i,"::",d[i].keys())
-        if d[i] not in l:
-            l.append(d)
+        if i not in l:
+            l.append(i)
     print("list==",l)
     # for j in d:
     #     print(j,[j])

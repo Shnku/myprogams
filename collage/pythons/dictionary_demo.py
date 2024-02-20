@@ -79,9 +79,14 @@ myfamily = {
     "year" : 2011
   }
 }
+print()
 for i in myfamily:
+    print(i)
+    print(myfamily[i]) #same
+    print(myfamily.get(i)) #same
     for j in myfamily[i]:
-        print(myfamily[i][j],"  ",end='')
+        print(myfamily[i][j],"  ")
+        print(myfamily[i].get(j))
     print()
 
 '''
