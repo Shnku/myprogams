@@ -28,8 +28,6 @@ You can write auxiliary functions to "clean up" polynomials – e.g., remove zer
 You may also want to convert the list representation to a dictionary representation and manipulate the dictionary representation, and then convert back.
 
 Some examples:
-
-  
    >>> addpoly([(4,3),(3,0)],[(-4,3),(2,1)])
    [(2, 1),(3, 0)]
 
@@ -45,3 +43,37 @@ Some examples:
 
    Explanation: (x - 1) * (x^2 + x + 1) = x^3 - 1
 '''
+
+def addpoly(l1,l2):
+    l3=[]
+    i,j=0,0
+    while (i<len(l1) and j<len(l2)):
+        print(l1[i][0],l1[i][1],l1[i][0],l1[i][1])
+        if l1[i][1]==l2[j][1]:
+            s=l1[i][0]+l2[j][0]
+            if s!=0:
+                l3.append((s,l1[i][1])) 
+            i+=1
+            j+=1
+        elif l1[i][1]>l2[j][1] :
+            l3.append(l1[i])
+            i+=1
+        else:
+            l3.append(l2[j])
+            j+=1
+    while i<len(l1):
+        l3.append(l1[i])
+        i+=1
+    while(j<len(l2)):
+        l3.append(l2[i])
+        j+=1
+    print(l3)
+    return(l3)
+
+def multpoly(l1,l2):
+    for i in l1:
+        for j in l2:
+            
+
+addpoly([(4,3),(3,0)],[(-4,3),(2,1)])
+addpoly([(3,2),(4,1)],[(-2,1)])

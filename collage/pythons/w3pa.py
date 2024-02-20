@@ -60,3 +60,16 @@ orangecap({
     'match3':{'player2':41, 'player4':63, 'player3':91}
     })
 orangecap({'test1':{'Pant':84, 'Kohli':120}, 'test2':{'Pant':59, 'Gill':42}})
+
+'''
+match2 :: dict_keys(['player3', 'player1'])
+match3 :: dict_keys(['player2', 'player4', 'player3'])
+list== ['player1', 'player2', 'player3', 'player4']
+list2== [99, 79, 100, 63]
+100 player3
+test1 :: dict_keys(['Pant', 'Kohli'])
+test2 :: dict_keys(['Pant', 'Gill'])
+list== ['Pant', 'Kohli', 'Gill']
+list2== [143, 120, 42]
+143 Pant
+'''
