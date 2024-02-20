@@ -26,13 +26,26 @@ For instance:
 ('Pant', 143)
 """
 
+from operator import index, indexOf
+
+
 def orangecap(d):
     l=[]
+    l2=[]
     for i in d: # it returns strings.. so we cant access it like this
-        print(i,"::",d[i].keys())
-        if i not in l:
-            l.append(i)
+        # print(i,"::",d[i].keys())
+        for j in d[i]:
+            if j not in l:
+                l.append(j)
+                l2.append(d[i].get(j))
+            else:
+                l2[l.index(j)]+=d[i].get(j)
     print("list==",l)
+    print("list2==",l2)
+    topscore=max(l2)
+    playername=l[l2.index(max(l2))]
+    print(topscore,playername)
+    return  (playername,topscore)
     # for j in d:
     #     print(j,[j])
     #     for k in range(len(l)):
@@ -40,7 +53,6 @@ def orangecap(d):
     #             l[k]+=int(d[j].values())
             
             
-    # return  (playername,topscore)
 
 orangecap({
     'match1':{'player1':57, 'player2':38}, 
