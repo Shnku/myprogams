@@ -30,38 +30,39 @@ from operator import index, indexOf
 
 
 def orangecap(d):
-    l=[]
-    l2=[]
-    for i in d: # it returns strings.. so we cant access it like this
+    l = []
+    l2 = []
+    for i in d:  # it returns strings.. so we cant access it like this
         # print(i,"::",d[i].keys())
         for j in d[i]:
             if j not in l:
                 l.append(j)
                 l2.append(d[i].get(j))
             else:
-                l2[l.index(j)]+=d[i].get(j)
-    print("list==",l)
-    print("list2==",l2)
-    topscore=max(l2)
-    playername=l[l2.index(max(l2))]
-    print(topscore,playername)
-    return  (playername,topscore)
+                l2[l.index(j)] += d[i].get(j)
+    print("list==", l)
+    print("list2==", l2)
+    topscore = max(l2)
+    playername = l[l2.index(max(l2))]
+    print(topscore, playername)
+    return (playername, topscore)
     # for j in d:
     #     print(j,[j])
     #     for k in range(len(l)):
     #         if d[j]==l[k]:
     #             l[k]+=int(d[j].values())
-            
-            
 
-orangecap({
-    'match1':{'player1':57, 'player2':38}, 
-    'match2':{'player3':9, 'player1':42}, 
-    'match3':{'player2':41, 'player4':63, 'player3':91}
-    })
-orangecap({'test1':{'Pant':84, 'Kohli':120}, 'test2':{'Pant':59, 'Gill':42}})
 
-'''
+orangecap(
+    {
+        "match1": {"player1": 57, "player2": 38},
+        "match2": {"player3": 9, "player1": 42},
+        "match3": {"player2": 41, "player4": 63, "player3": 91},
+    }
+)
+orangecap({"test1": {"Pant": 84, "Kohli": 120}, "test2": {"Pant": 59, "Gill": 42}})
+
+"""
 match2 :: dict_keys(['player3', 'player1'])
 match3 :: dict_keys(['player2', 'player4', 'player3'])
 list== ['player1', 'player2', 'player3', 'player4']
@@ -72,4 +73,4 @@ test2 :: dict_keys(['Pant', 'Gill'])
 list== ['Pant', 'Kohli', 'Gill']
 list2== [143, 120, 42]
 143 Pant
-'''
+"""
