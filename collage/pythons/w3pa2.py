@@ -70,10 +70,60 @@ def addpoly(l1,l2):
     print(l3)
     return(l3)
 
+
 def multpoly(l1,l2):
+    l3=[]
     for i in l1:
         for j in l2:
-            
+            exp,cof=i[1]+j[1],i[0]*j[0]     
+            flag,size=False,len(l3)         
+            for k in range(size):
+                if size>k and exp == l3[k][1]: 
+                #size needed for index error after removing element...
+                    cof+=l3[k][0]
+                    print("yes",exp)
+                    print(l3, "removed : ",l3[k])
+                    l3.remove(l3[k])
+                    size-=1
+                    print(l3, "cof==",cof, " k=",k)
+                    if cof !=0:
+                        print("k==",k)
+                        l3.insert(k,(cof,exp))
+                    print("insert= ",l3)
+                    flag=True
+            if not flag:
+                print("in elase: ", cof,exp)
+                l3.append((cof,exp))
+                print(l3) 
+    print(l3)
+    return(l3)
+                
 
-addpoly([(4,3),(3,0)],[(-4,3),(2,1)])
-addpoly([(3,2),(4,1)],[(-2,1)])
+# addpoly([(4,3),(3,0)],[(-4,3),(2,1)])
+# addpoly([(3,2),(4,1)],[(-2,1)])
+print()
+# multpoly([(4,3),(3,0)],[(-4,3),(2,1)])
+multpoly([(1,1),(-1,0)],[(1,2),(1,1),(1,0)])
+
+
+'''
+
+in elase:  1 3
+[(1, 3)]
+in elase:  1 2
+[(1, 3), (1, 2)]
+in elase:  1 1
+[(1, 3), (1, 2), (1, 1)]
+yes 2
+[(1, 3), (1, 2), (1, 1)] removed :  (1, 2)
+[(1, 3), (1, 1)]
+insert=  [(1, 3), (0, 2), (1, 1)]
+yes 1
+[(1, 3), (0, 2), (1, 1)] removed :  (1, 1)
+[(1, 3), (0, 2)]
+insert=  [(1, 3), (0, 2), (0, 1)]
+in elase:  -1 0
+[(1, 3), (0, 2), (0, 1), (-1, 0)]
+[(1, 3), (0, 2), (0, 1), (-1, 0)]
+codespace:/workspaces/myprogams/collage/pythons> 
+'''
