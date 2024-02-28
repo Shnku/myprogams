@@ -12,7 +12,7 @@
 		"python.analysis.autoImportCompletions": true,
 		"python.analysis.addImport.exactMatchOnly": true,
 		"python.analysis.completeFunctionParens": true,
-		"python.analysis.inlayHints.callArgumentNames": true,
+		"python.analysis.inlayHints.callArgumentNames": "all",
 		"pythonIndent.keepHangingBracketOnLine": true,
 		"pythonIndent.trimLinesWithOnlyWhitespace": true,
 		"pythonIndent.useTabOnHangingIndent": true,
