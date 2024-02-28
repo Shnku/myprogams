@@ -86,7 +86,18 @@ for i in myfamily:
     print()
 
 """
-Emil   2004   
-Tobias   2007   
-Linus   2011   
+Emil   2004
+Tobias   2007
+Linus   2011
 """
+
+s = {}
+s["data1"] = 1
+s["data2"] = 2
+print(s)
+if "data1" not in s:
+    print("no")
+else:
+    print("yes")
+    s["data3"] = 89
+print(s)
