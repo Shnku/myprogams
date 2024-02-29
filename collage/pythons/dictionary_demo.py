@@ -86,6 +86,29 @@ for i in myfamily:
     print()
 
 """
+child1
+{'name': 'Emil', 'year': 2004}
+{'name': 'Emil', 'year': 2004}
+Emil   
+Emil
+2004   
+2004
+
+child2
+{'name': 'Tobias', 'year': 2007}
+{'name': 'Tobias', 'year': 2007}
+Tobias   
+Tobias
+2007   
+2007
+
+child3
+{'name': 'Linus', 'year': 2011}
+{'name': 'Linus', 'year': 2011}
+Linus   
+Linus
+2011 
+
 Emil   2004
 Tobias   2007
 Linus   2011
@@ -101,3 +124,18 @@ else:
     print("yes")
     s["data3"] = 89
 print(s)
+"""
+{'data1': 1, 'data2': 2}
+yes
+{'data1': 1, 'data2': 2, 'data3': 89}
+"""
+
+
+# sorting.. dictonary...
+# from w5pa import sorting
+d = {"a": 34, "b": 4, "c": 345, "d": 90, "e": 7}
+val_list = list(d.values())
+val_list.sort()
+print(val_list)
+sorted(d.items(), key=val_list)
+print(d)
