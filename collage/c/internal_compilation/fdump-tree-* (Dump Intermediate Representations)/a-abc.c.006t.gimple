@@ -1,0 +1,22 @@
+int main ()
+{
+  int D.3212;
+
+  {
+    int a;
+    int b;
+    int c;
+
+    a = 23;
+    b = 90;
+    _1 = b * 10;
+    c = a + _1;
+    printf ("the sum is %d", c);
+    D.3212 = 0;
+    return D.3212;
+  }
+  D.3212 = 0;
+  return D.3212;
+}
+
+

@@ -1,0 +1,43 @@
+
+;; Function main (main, funcdef_no=0, decl_uid=3206, cgraph_uid=1, symbol_order=0)
+
+
+Analyzing function body size: main/0
+
+IPA function summary for main/0
+  global time:     16.000000
+  self size:       8
+  global size:     8
+  min size:       0
+  self stack:      0
+  global stack:    0
+    size:3.000000, time:4.000000
+    size:2.000000, time:0.000000,  executed if:(not inlined)
+  calls:
+    printf/1 function body not available
+      freq:1.00 loop depth: 0 size: 3 time: 12
+
+int main ()
+{
+  int c;
+  int b;
+  int a;
+  int D.3212;
+  int _1;
+  int _7;
+
+  <bb 2> :
+  a_2 = 23;
+  b_3 = 90;
+  _1 = b_3 * 10;
+  c_4 = a_2 + _1;
+  printf ("the sum is %d", c_4);
+  _7 = 0;
+
+  <bb 3> :
+<L0>:
+  return _7;
+
+}
+
+
