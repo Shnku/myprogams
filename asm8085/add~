@@ -1,0 +1,16 @@
+
+;<Program title>
+
+jmp start
+
+;data
+
+
+;code
+start: 
+	lda 0070h
+	mov b,a
+	lda 0071h
+	add b
+	sta 0072h
+	hlt
